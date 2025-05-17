@@ -1,0 +1,225 @@
+.container {
+  background: #222222;
+  padding: 80px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-shrink: 0;
+  width: 1280px;
+  position: relative;
+  max-width: 100%;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 96px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  flex: 1;
+  position: relative;
+}
+
+.contentRow {
+  display: flex;
+  flex-direction: row;
+  row-gap: 80px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.quoteContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+}
+
+.quote {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 47px;
+  line-height: 130%;
+  font-weight: 500;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.authorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.authorName {
+  color: #f7f7f7;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  position: relative;
+}
+
+.authorTitle {
+  color: #d0d0d0;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  position: relative;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 120px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffffff;
+}
+
+.button:hover .buttonText {
+  color: #222222;
+}
+
+.buttonIcon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  transition: filter 0.3s ease;
+}
+
+.button:hover .buttonIcon {
+  filter: invert(0%);
+}
+
+.buttonText {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .innerContainer {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .contentRow {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .quote {
+    font-size: 36px;
+  }
+
+  .contentRow {
+    gap: 40px;
+  }
+
+  .quoteContainer {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 20px;
+  }
+
+  .contentRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .quote {
+    font-size: 28px;
+    max-width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .quoteContainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .quote {
+    font-size: 24px;
+  }
+
+  .authorName {
+    font-size: 14px;
+  }
+
+  .authorTitle {
+    font-size: 12px;
+  }
+}

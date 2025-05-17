@@ -1,0 +1,58 @@
+.payloadsPage {
+  background-color: #001718;
+  min-height: 100vh;
+}
+
+.payloadTypesWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.payloadTypesHeader {
+  margin-bottom: 40px;
+  
+}
+
+.trustWallLabel {
+  color: #8a8a8a;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .payloadTypesWrapper {
+    padding: 40px 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .payloadTypesWrapper {
+    padding: 30px 15px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .payloadTypesWrapper {
+    padding: 20px 10px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}

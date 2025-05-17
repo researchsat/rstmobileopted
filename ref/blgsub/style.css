@@ -1,0 +1,109 @@
+.frame-1000006728,
+.frame-1000006728 * {
+  box-sizing: border-box;
+}
+.frame-1000006728 {
+  height: 821px;
+  position: relative;
+}
+.rectangle-18514 {
+  background: rgba(0, 0, 0, 0.25);
+  width: 1440px;
+  height: 821px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.image {
+  position: absolute;
+  inset: 0;
+}
+.unsplash-s-3-h-qu-5-yjg {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  width: 1440px;
+  height: 593px;
+  position: absolute;
+  right: -1440px;
+  top: 228px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+  object-fit: cover;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 1280px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 74px;
+}
+.breadcrumbs {
+  flex-shrink: 0;
+  width: 1280px;
+  height: 25px;
+  position: relative;
+}
+.home-blog-exploring-the-final-frontier-future-of-space-research {
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 28%;
+  top: 0%;
+  height: 72%;
+}
+.home-blog-exploring-the-final-frontier-future-of-space-research-span {
+  color: var(--black-500, #8a8a8a);
+}
+.home-blog-exploring-the-final-frontier-future-of-space-research-span2 {
+  color: var(--coral-red-300, #ef3b47);
+}
+.container2 {
+  flex-shrink: 0;
+  width: 954px;
+  height: 46px;
+  position: static;
+}
+.title {
+  color: var(--white, #ffffff);
+  text-align: left;
+  font-family: var(--h4-font-family, "Poppins-Medium", sans-serif);
+  font-size: var(--h4-font-size, 33px);
+  line-height: var(--h4-line-height, 140%);
+  letter-spacing: var(--h4-letter-spacing, 0.25px);
+  font-weight: var(--h4-font-weight, 500);
+  position: absolute;
+  left: 0px;
+  top: 41px;
+  width: 954px;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.author {
+  color: var(--black-300, #d0d0d0);
+  text-align: left;
+  font-family: var(--s1-font-family, "Poppins-Regular", sans-serif);
+  font-size: var(--s1-font-size, 16px);
+  line-height: var(--s1-line-height, 135%);
+  letter-spacing: var(--s1-letter-spacing, 0.15px);
+  font-weight: var(--s1-font-weight, 400);
+  position: relative;
+}

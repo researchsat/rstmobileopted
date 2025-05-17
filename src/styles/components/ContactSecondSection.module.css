@@ -1,0 +1,146 @@
+.secondSection {
+  background: #121212;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 351px;
+  row-gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
+  margin-top: 0;
+  padding-top: 120px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 351px;
+  row-gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 47px;
+  line-height: 130%;
+  font-weight: 500;
+  position: relative;
+  width: 300px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+}
+
+.descriptionText {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.grayText {
+  color: #8a8a8a;
+}
+
+.lightText {
+  color: #cfd4d5;
+}
+
+.scheduleButton {
+  background: #107e7d;
+  border-radius: 8px;
+  border: 1px solid #107e7d;
+  padding: 14px 28px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 229px;
+  height: 40px;
+  min-width: 120px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.scheduleButton:hover {
+  background: #ff3241;
+  border-color: #ff3241;
+}
+
+.scheduleButton:hover .buttonText {
+  color: #fffef6;
+}
+
+.buttonText {
+  color: #fffef6;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .secondSection {
+    gap: 80px;
+  }
+
+  .container {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .secondSection {
+    padding: 60px 40px;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .secondSection {
+    padding: 40px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .scheduleButton {
+    width: 100%;
+  }
+}

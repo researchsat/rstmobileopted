@@ -1,0 +1,141 @@
+.secondSection {
+  background: #000000;
+  padding: 40px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 351px;
+  row-gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  position: relative;
+  width: 300px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+}
+
+.descriptionText {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.grayText {
+  color: #8a8a8a;
+}
+
+.redText {
+  color: #ef3b47;
+}
+
+.lightText {
+  color: #cfd4d5;
+}
+
+.contactButton {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 14px 28px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 229px;
+  height: 40px;
+  min-width: 120px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.contactButton:hover {
+  background: #107e7d;
+  border-color: #107e7d;
+}
+
+.contactButton:hover .buttonText {
+  color: #fffef6;
+}
+
+.buttonText {
+  color: #323232;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .container {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .secondSection {
+    padding: 30px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .secondSection {
+    padding: 20px 0;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .contactButton {
+    width: 100%;
+  }
+}

@@ -1,0 +1,10 @@
+/* App container styles */
+#app {
+  background-color: #000000;
+  background-image: url('/src/assets/images/background/app-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}

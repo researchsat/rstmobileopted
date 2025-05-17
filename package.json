@@ -1,0 +1,60 @@
+{
+  "name": "rstWebsiteVitePrj",
+  "version": "1.0.0",
+  "description": "ResearchSat website rebuilt with Vite",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "convert-images": "node scripts/convert-to-webp.js",
+    "fix-source-maps": "node scripts/fix-source-maps.js",
+    "prebuild": "npm run convert-images"
+  },
+  "keywords": [
+    "researchsat",
+    "space",
+    "biology",
+    "microgravity",
+    "vite"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "babel-jest": "^29.7.0",
+    "glob": "^11.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "sharp": "^0.34.1",
+    "terser": "^5.39.2",
+    "vite": "^6.3.5",
+    "vite-plugin-imagemin": "^0.6.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.6",
+    "emailjs-com": "^3.2.0",
+    "font-awesome": "^4.7.0",
+    "framer-motion": "^12.12.1",
+    "jquery": "^3.7.1",
+    "magnific-popup": "^1.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^7.6.0",
+    "sass": "^1.89.0",
+    "swiper": "^11.2.6",
+    "zustand": "^5.0.4"
+  }
+}

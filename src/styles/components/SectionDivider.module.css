@@ -1,0 +1,15 @@
+.dividerContainer {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dividerImage {
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/images/dividers/space-divider.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

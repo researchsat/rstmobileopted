@@ -1,0 +1,354 @@
+/* ServicesSection.module.css */
+.servicesSection {
+  position: relative;
+  height: 829px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* Services Header */
+.servicesLabel {
+  color: #e2e2e2;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+}
+
+.servicesTitle {
+  color: #cfd4d5;
+  font-size: 58px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  position: absolute;
+  top: 81px;
+  left: 80px;
+  width: 955px;
+}
+
+.discoverButton {
+  display: flex;
+  width: 229px;
+  height: 51px;
+  min-width: 120px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #ECEEEF;
+  color: #eceeef;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  text-decoration: none;
+  position: absolute;
+  top: 90px;
+  right: 80px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.discoverButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.discoverButton::after {
+  content: "";
+}
+
+/* Services Grid - Bento Layout */
+.servicesGrid {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 191px;
+  left: 80px;
+  width: 1280px;
+  height: 574px;
+}
+
+/* Left Column - Large Card */
+.leftColumn {
+  flex: 1;
+  height: 100%;
+}
+
+.largeCard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Right Column */
+.rightColumn {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Medium Card */
+.mediumCard {
+  width: 100%;
+  height: 276px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Small Cards Row */
+.smallCardsRow {
+  display: flex;
+  gap: 20px;
+  height: 276px;
+}
+
+/* Card Image */
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+/* Card Overlay */
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 36px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardLabel {
+  color: #f7f7f7;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  width: 261px;
+}
+
+/* Small Card */
+.smallCard {
+  flex: 1;
+  height: 100%;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.grayCard {
+  background-color: #b7bec0;
+}
+
+.lightCard {
+  background-color: #eeeeee;
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+}
+
+.smallCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.smallCardLabel {
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+.grayCard .smallCardLabel,
+.grayCard .smallCardTitle {
+  color: #ffffff;
+}
+
+.lightCard .smallCardLabel {
+  color: #636363;
+}
+
+.lightCard .smallCardTitle {
+  color: #121212;
+}
+
+.smallCardTitle {
+  font-size: 19px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .servicesTitle {
+    font-size: 48px;
+    width: 800px;
+  }
+
+  .servicesGrid {
+    width: 100%;
+    left: 0;
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .servicesSection {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .servicesTitle {
+    font-size: 36px;
+    width: 600px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .servicesLabel {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .discoverButton {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 100px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .servicesGrid {
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .leftColumn, .rightColumn {
+    width: 100%;
+  }
+
+  .largeCard {
+    height: 400px;
+  }
+
+  .smallCardsRow {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .smallCard {
+    height: 276px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .servicesTitle {
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .discoverButton {
+    width: 100%;
+  }
+
+  .cardTitle, .smallCardTitle {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .servicesTitle {
+    font-size: 28px;
+  }
+
+  .servicesLabel {
+    font-size: 14px;
+  }
+
+  .discoverButton {
+    font-size: 14px;
+    padding: 12px 24px;
+    height: auto;
+  }
+
+  .cardLabel, .smallCardLabel {
+    font-size: 10px;
+  }
+
+  .cardTitle, .smallCardTitle {
+    font-size: 14px;
+  }
+
+  .cardOverlay {
+    padding: 0 20px 30px;
+  }
+}

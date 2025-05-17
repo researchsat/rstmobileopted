@@ -1,0 +1,236 @@
+/* Header.module.css */
+.header {
+  position: relative;
+  height: 889px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background Image is now handled by BackgroundImage component */
+
+/* Right Side Content */
+.rightContent {
+  position: absolute;
+  right: 80px;
+  top: 136px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 188px;
+  margin-bottom: 30px;
+}
+
+.brandName {
+  color: #ff3241;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+}
+
+.buttonWrapper {
+  margin-top: 10px;
+}
+
+.exploreButton {
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 16px 32px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: 229px;
+  text-align: center;
+}
+
+.exploreButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Bottom Content */
+.bottomContent {
+  position: absolute;
+  left: 80px;
+  bottom: 80px;
+  z-index: 10;
+  margin-top: 540px;
+}
+
+.glowEffect {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(19, 19, 20, 0.8) 100%
+  );
+  width: 370px;
+  height: 70px;
+  position: absolute;
+  left: -13px;
+  bottom: 150px;
+  filter: blur(125px);
+}
+
+.satellitesText {
+  color: #ffffff;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 64px;
+  line-height: 95%;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  margin-bottom: 13px;
+}
+
+.satellitesText span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.lifeSciencesText {
+  color: #ffffff;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 64px;
+  line-height: 95%;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .header {
+    height: 800px;
+  }
+
+  .satellitesText, .lifeSciencesText {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    height: 700px;
+  }
+
+  .rightContent {
+    right: 40px;
+    top: 120px;
+  }
+
+  .bottomContent {
+    left: 40px;
+    bottom: 60px;
+  }
+
+  .satellitesText, .lifeSciencesText {
+    font-size: 48px;
+  }
+
+  .glowEffect {
+    width: 300px;
+    height: 60px;
+    bottom: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 600px;
+  }
+
+  .rightContent {
+    right: 20px;
+    top: 100px;
+  }
+
+  .bottomContent {
+    left: 20px;
+    bottom: 40px;
+  }
+
+  .satellitesText, .lifeSciencesText {
+    font-size: 40px;
+  }
+
+  .glowEffect {
+    width: 250px;
+    height: 50px;
+    bottom: 100px;
+  }
+
+  .exploreButton {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    height: 500px;
+  }
+
+  .rightContent {
+    right: 15px;
+    top: 80px;
+    width: 160px;
+  }
+
+  .brandText {
+    width: 160px;
+  }
+
+  .brandName, .tagline {
+    font-size: 14px;
+  }
+
+  .bottomContent {
+    left: 15px;
+    bottom: 30px;
+  }
+
+  .satellitesText, .lifeSciencesText {
+    font-size: 32px;
+  }
+
+  .glowEffect {
+    width: 200px;
+    height: 40px;
+    bottom: 80px;
+  }
+
+  .exploreButton {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}

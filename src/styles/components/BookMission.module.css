@@ -1,0 +1,317 @@
+/* Book a Mission Section */
+.bookMissionSection {
+  width: 100%;
+  background: #121212;
+  padding: 90px 0;
+  position: relative;
+  margin-top: 60px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  color: #F7F7F7;
+  margin-bottom: 40px;
+}
+
+/* Form Container */
+.formContainer {
+  width: 630px;
+  background: #000000;
+  border-radius: 20px;
+  padding: 40px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.formTitle {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 140%;
+  color: #EEEEEE;
+  margin-bottom: 10px;
+}
+
+.formDescription {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E2E2E2;
+  margin-bottom: 30px;
+}
+
+.form {
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.1px;
+  color: #8A8A8A;
+  margin-bottom: 8px;
+}
+
+.input, .textarea {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 5px;
+  border: 0.5px solid #8A8A8A;
+  border-radius: 6px;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  color: #E2E2E2;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #636363;
+  opacity: 0.6;
+}
+
+.textarea {
+  min-height: 109px;
+  resize: vertical;
+}
+
+.submitButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 7.5px;
+  width: 229px;
+  min-width: 120px;
+  height: 51px;
+  border: 1px solid #ff3241;
+  border-radius: 8px;
+  background: #ff3241;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  color: #fffef6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #107e7d;
+  border-color: #107e7d;
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  margin-top: 15px;
+  color: #4CAF50;
+  font-family: 'Poppins', sans-serif;
+}
+
+.errorMessage {
+  margin-top: 15px;
+  color: #FF3241;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Image Container */
+.imageContainer {
+  width: 630px;
+  position: relative;
+}
+
+.rocketImage {
+  width: 100%;
+  height: 318px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.contactInfo {
+  margin-bottom: 30px;
+}
+
+.contactTitle {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+  letter-spacing: 0.25px;
+  color: #8A8A8A;
+  margin-bottom: 10px;
+}
+
+.emailLink {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+  letter-spacing: 0.25px;
+  color: #107e7d;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.emailLink:hover {
+  color: #ff3241;
+}
+
+.phoneNumber {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+  letter-spacing: 0.25px;
+  color: #E2E2E2;
+}
+
+.meetingInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.meetingText {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  color: #8A8A8A;
+  margin-bottom: 20px;
+}
+
+.scheduleButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 7.5px;
+  width: 229px;
+  min-width: 120px;
+  height: 51px;
+  background: #107e7d;
+  border: 1px solid #107e7d;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  color: #fffef6;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.scheduleButton:hover {
+  background: #ff3241;
+  border-color: #ff3241;
+}
+
+/* Responsive Styles */
+@media (max-width: 1300px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .formContainer, .imageContainer {
+    width: 48%;
+  }
+}
+
+@media (max-width: 992px) {
+  .sectionTitle {
+    font-size: 42px;
+  }
+
+  .formContainer, .imageContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .imageContainer {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 36px;
+  }
+
+  .formContainer {
+    padding: 30px;
+  }
+
+  .formTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .formContainer {
+    padding: 20px;
+  }
+
+  .submitButton, .scheduleButton {
+    width: 100%;
+  }
+}

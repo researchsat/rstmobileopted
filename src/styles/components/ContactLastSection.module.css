@@ -1,0 +1,129 @@
+.contactSection {
+  background: #222222;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 351px;
+  row-gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
+}
+
+.contactTitle {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 47px;
+  line-height: 130%;
+  font-weight: 500;
+  position: relative;
+  width: 300px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+}
+
+.reachUs {
+  color: #8a8a8a;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 135%;
+  letter-spacing: 0.25px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.contactEmail, .contactPhone {
+  background: linear-gradient(180deg, rgba(187, 222, 208, 1) 0%, rgba(135, 194, 170, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 135%;
+  letter-spacing: 0.25px;
+  font-weight: 400;
+  position: relative;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.contactEmail:hover, .contactPhone:hover {
+  opacity: 0.8;
+  background: linear-gradient(180deg, rgba(187, 222, 208, 1) 0%, rgba(135, 194, 170, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contactEmail:hover::after, .contactPhone:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(180deg, rgba(187, 222, 208, 1) 0%, rgba(135, 194, 170, 1) 100%);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .contactSection {
+    gap: 150px;
+  }
+}
+
+@media (max-width: 991px) {
+  .contactSection {
+    padding: 60px 40px;
+    gap: 80px;
+  }
+
+  .contactTitle {
+    font-size: 36px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 50px 30px;
+  }
+
+  .contactTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 40px 20px;
+  }
+
+  .contactTitle {
+    font-size: 28px;
+  }
+}

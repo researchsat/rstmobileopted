@@ -1,0 +1,612 @@
+/* BenefitsSection.module.css */
+.benefitsSection {
+  position: relative;
+  height: 719px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  left: 80px;
+  top: 40px;
+}
+
+.benefitsLabel {
+  color: #8a8a8a;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+.benefitsTitle {
+  color: #e2e2e2;
+  font-size: 58px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  width: 870px;
+}
+
+.benefitsDescription {
+  color: #d0d0d0;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  width: 631px;
+}
+
+/* Success Stories Button */
+.successButton {
+  border-radius: 8px;
+  border: 1px solid #f7f7f7;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 229px;
+  min-width: 120px;
+  position: absolute;
+  right: 80px;
+  top: 94px;
+  color: #f7f7f7;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.successButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Bento Grid */
+.bentoGrid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  left: 80px;
+  top: 222px;
+  width: 1280px;
+}
+
+/* Card 1 */
+.card1 {
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(50, 50, 50, 1) 100%,
+    rgba(80, 80, 80, 1) 100.01%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  height: 380px;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Column 2 */
+.column2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  height: 380px;
+}
+
+/* Card 2 */
+.card2 {
+  background: linear-gradient(
+    66.62deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(32, 39, 36, 1) 72.42%,
+    rgba(50, 50, 50, 1) 100%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card2Bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  mix-blend-mode: soft-light;
+}
+
+/* Card 3 */
+.card3 {
+  background: linear-gradient(
+    180deg,
+    rgba(137, 16, 28, 1) 0%,
+    rgba(255, 95, 104, 1) 100%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card 4 */
+.card4 {
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(50, 50, 50, 1) 100%,
+    rgba(80, 80, 80, 1) 100.01%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex: 1;
+  height: 380px;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card 5 */
+.card5 {
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(50, 50, 50, 1) 100%,
+    rgba(80, 80, 80, 1) 100.01%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  height: 380px;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Content */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 237px;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+}
+
+/* Background Elements */
+.starsBackground {
+  width: 285.87px;
+  height: 306px;
+  position: absolute;
+  left: 89.6px;
+  top: 269px;
+  overflow: hidden;
+  mix-blend-mode: overlay;
+}
+
+/* Star dots */
+.star1 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 19px;
+  top: 138px;
+}
+
+.star2 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 282px;
+  top: 146px;
+}
+
+.star3 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 64px;
+  top: 120px;
+}
+
+.star4 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 45px;
+  top: 0px;
+}
+
+.star5 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 162px;
+  top: 124px;
+}
+
+.star6 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 9px;
+  top: 233px;
+}
+
+.star7 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  left: 170px;
+  top: 260px;
+}
+
+.star8 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 214px;
+  top: 86px;
+}
+
+.star9 {
+  background: #d1c6f0;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  left: 222px;
+  top: 206px;
+}
+
+.star10 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  left: 49px;
+  top: 192px;
+}
+
+/* Solar System */
+.solarSystem {
+  opacity: 0.5;
+  width: 304px;
+  height: 300px;
+  position: absolute;
+  left: 730.67px;
+  top: 253px;
+  overflow: hidden;
+}
+
+/* Orbits */
+.orbit1 {
+  border-radius: 50%;
+  border: 0.5px solid #505050;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+.orbit2 {
+  border-radius: 50%;
+  border: 0.5px solid #505050;
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left: 80px;
+  top: 80px;
+}
+
+.orbit3 {
+  border-radius: 50%;
+  border: 0.5px solid #505050;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  left: 60px;
+  top: 60px;
+}
+
+.orbit4 {
+  border-radius: 50%;
+  border: 0.5px solid #505050;
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+.orbit5 {
+  border-radius: 50%;
+  border: 0.5px solid #505050;
+  width: 260px;
+  height: 260px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.orbit6 {
+  border-radius: 50%;
+  border: 0.5px solid #505050;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+/* Planets */
+.planet1 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 98px;
+  top: 149px;
+}
+
+.planet2 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 197.5px;
+  top: 195px;
+}
+
+.planet3 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 147.5px;
+  top: 237.5px;
+}
+
+.planet4 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 69.5px;
+  top: 102.5px;
+}
+
+.planet5 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 230.5px;
+  top: 75px;
+}
+
+.planet6 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 87.5px;
+  top: 285px;
+}
+
+/* Wave Background */
+.waveBg {
+  width: 302.93px;
+  height: 199px;
+  position: absolute;
+  right: 80px;
+  top: 350px;
+  overflow: hidden;
+}
+
+.maskGroup {
+  opacity: 0.4;
+  height: auto;
+  position: absolute;
+  left: -85px;
+  top: 0px;
+}
+
+
+
+/* Interdisciplinary Research Text */
+.interdisciplinaryResearch {
+  color: #ffffff;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  position: absolute;
+  left: 422.51px;
+  top: 260px;
+  width: 214.4px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .bentoGrid {
+    width: 100%;
+    padding: 0 80px;
+    left: 0;
+  }
+
+  .benefitsTitle {
+    font-size: 48px;
+    width: 700px;
+  }
+
+  .benefitsDescription {
+    width: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .benefitsSection {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .header {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 40px 40px 0;
+  }
+
+  .benefitsTitle {
+    font-size: 36px;
+    width: 100%;
+  }
+
+  .benefitsDescription {
+    width: 100%;
+  }
+
+  .successButton {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 30px 0 0 40px;
+  }
+
+  .bentoGrid {
+    position: relative;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    padding: 40px;
+    margin-top: 30px;
+  }
+
+  .card1, .card4, .card5 {
+    height: 300px;
+  }
+
+  .column2 {
+    height: auto;
+  }
+
+  .starsBackground, .solarSystem, .waveBg, .interdisciplinaryResearch {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 40px 20px 0;
+  }
+
+  .benefitsTitle {
+    font-size: 32px;
+  }
+
+  .successButton {
+    margin: 30px 0 0 20px;
+  }
+
+  .bentoGrid {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .benefitsTitle {
+    font-size: 28px;
+  }
+
+  .benefitsDescription {
+    font-size: 14px;
+  }
+
+  .successButton {
+    width: calc(100% - 40px);
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+}

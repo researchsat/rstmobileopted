@@ -1,0 +1,117 @@
+.container {
+  background: linear-gradient(
+    180deg,
+    rgba(187, 222, 208, 1) 0%,
+    rgba(135, 194, 170, 1) 100%
+  );
+  background-image: url('../../assets/images/midsec.svg');
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-size: cover;
+  padding: 80px 10px 80px 10px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-shrink: 0;
+  width: 1280px;
+  position: relative;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+  gap: 96px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  flex: 1;
+  position: relative;
+}
+
+.container4 {
+  display: flex;
+  flex-direction: row;
+  row-gap: 80px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-shrink: 0;
+  width: 1280px;
+  min-width: 343px;
+  position: relative;
+}
+
+.container5 {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+}
+
+.description {
+  color: #323232;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  position: relative;
+  width: 626px;
+}
+
+/* Media Queries */
+@media (max-width: 1300px) {
+  .container2, .container4 {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .description {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 10px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 10px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}

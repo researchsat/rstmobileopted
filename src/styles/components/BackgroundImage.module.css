@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #e2e2e2;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.loaded {
+  opacity: 1;
+}
+
+.fixed {
+  background-attachment: fixed;
+}
+
+/* Overlay effect */
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, var(--overlay-opacity, 0.5));
+  z-index: 1;
+}
+
+/* Ensure content is above overlay */
+.overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fixed {
+    /* Fixed backgrounds can cause performance issues on mobile */
+    background-attachment: scroll;
+  }
+}

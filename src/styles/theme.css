@@ -1,0 +1,141 @@
+/* Theme variables */
+:root {
+  /* Light theme (default) */
+  --primary-color: #0E7369;
+  --secondary-color: #ff3241;
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --heading-color: #ffffff;
+  --link-color: #0E7369;
+  --link-hover-color: #0a5a53;
+  --card-background: rgba(0, 0, 0, 0.8);
+  --card-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  --button-text: #ffffff;
+  --border-color: #626262;
+  --input-background: rgba(255, 255, 255, 0.9);
+  --input-text: #393939;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --font-family: 'Poppins', sans-serif;
+
+  /* Parallax background */
+  --parallax-bg-image: url('/src/assets/images/background/parallax-bg.png');
+}
+
+/* Apply theme to body */
+body {
+  background-color: var(--background-color);
+  background-image: url('/src/assets/images/background/stars-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  min-height: 100vh;
+}
+
+/* Parallax section class */
+.parallax-section {
+  position: relative;
+  background-image: var(--parallax-bg-image);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  animation: subtle-parallax 60s linear infinite;
+  transform: translateZ(0); /* Force hardware acceleration for smoother parallax */
+  will-change: background-position; /* Hint to browser for optimization */
+}
+
+@keyframes subtle-parallax {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: center 55%;
+  }
+  100% {
+    background-position: center;
+  }
+}
+
+/* Mobile fallback for parallax */
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll; /* Fallback for mobile devices */
+    animation: subtle-parallax-mobile 30s linear infinite;
+  }
+
+  @keyframes subtle-parallax-mobile {
+    0% {
+      background-position: center;
+    }
+    50% {
+      background-position: center bottom;
+    }
+    100% {
+      background-position: center;
+    }
+  }
+}
+
+/* Parallax content container */
+.parallax-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+/* Paragraphs */
+p, li, span, div {
+  color: var(--text-color);
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Buttons */
+.btn-solid-reg {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--button-text);
+  transition: all 0.3s ease;
+}
+
+.btn-solid-reg:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-background);
+  box-shadow: var(--card-shadow);
+}
+
+/* Forms */
+input, textarea, select {
+  background-color: var(--input-background);
+  color: var(--input-text);
+  border-color: var(--border-color);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(14, 115, 105, 0.25);
+}

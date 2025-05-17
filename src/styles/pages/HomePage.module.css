@@ -1,0 +1,148 @@
+/* HomePage.module.css */
+.heroSection {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  background-color: #17242D;
+  text-align: center;
+}
+
+.heroContent {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.heroText {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.heroTitle {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-top: 2rem;
+  font-size: 1.4em;
+  color: #0E7369;
+}
+
+.heroSubtitle {
+  color: #5f7371;
+  padding-bottom: 1rem;
+}
+
+.heroParagraph {
+  font-size: 20px;
+  letter-spacing: 0.03em;
+}
+
+.heroAccent {
+  color: #ff3241;
+}
+
+.heroImage {
+  margin-bottom: 1rem;
+}
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.playButton {
+  padding: 0.8rem;
+  margin-left: 0.9em;
+}
+
+.partnersLogos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 9%;
+  padding-left: 1rem;
+}
+
+.partnersLogos img {
+  max-height: 2.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Services Section */
+.servicesSection {
+  background-color: #17232e;
+  padding-bottom: 4rem;
+}
+
+.servicesHeading {
+  color: #ff3241;
+  padding-bottom: 0.7rem;
+  text-align: center;
+}
+
+.servicesSubheading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.serviceLink {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid #ff3241;
+  font-weight: 400;
+}
+
+/* Benefits Section */
+.benefitsSection {
+  background-image: url('/src/assets/images/abj3.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+
+.benefitsHeading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.benefitsSubheading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .heroText {
+    margin-bottom: 2rem;
+  }
+  
+  .heroTitle {
+    font-size: 1.2em;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.8rem;
+  }
+  
+  .heroParagraph {
+    font-size: 1rem;
+  }
+  
+  .partnersLogos img {
+    max-height: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .heroSection {
+    padding-top: 11rem;
+    padding-bottom: 9rem;
+    text-align: left;
+  }
+  
+  .heroText {
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+}

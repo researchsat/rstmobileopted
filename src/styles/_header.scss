@@ -1,0 +1,75 @@
+// Header styles
+
+.header {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  background-color: $primary-color;
+  text-align: center;
+  
+  .header-content {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    
+    .text-container {
+      margin-bottom: 3rem;
+      
+      h4 {
+        margin-bottom: 1.5rem;
+      }
+      
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+      
+      .p-large {
+        margin-bottom: 2rem;
+      }
+    }
+    
+    .image-container {
+      margin-bottom: 3rem;
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  
+  #partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+    img {
+      max-height: 2.5rem;
+      margin-right: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@include respond-to(lg) {
+  .header {
+    padding-top: 11rem;
+    padding-bottom: 9rem;
+    
+    .header-content {
+      .text-container {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include respond-to(md) {
+  .header {
+    .header-content {
+      .text-container {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

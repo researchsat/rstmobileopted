@@ -1,0 +1,143 @@
+/* AboutSecondSection.module.css */
+.sectionContainer {
+  background: #191a1d;
+  padding: 80px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  background-image: url('/src/assets/images/about/absec2-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 1280px;
+  position: relative;
+}
+
+.innerWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 96px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex: 1;
+  position: relative;
+}
+
+.contentRow {
+  display: flex;
+  flex-direction: row;
+  row-gap: 80px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1280px;
+  min-width: 343px;
+  position: relative;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+}
+
+.descriptionText {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 33px;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  position: relative;
+  width: 958px;
+  max-width: 100%;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 229px;
+  min-width: 120px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.boltIcon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+.buttonText {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .contentWrapper, .contentRow {
+    width: 100%;
+  }
+  
+  .descriptionText {
+    width: 100%;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: 60px 20px;
+  }
+  
+  .descriptionText {
+    font-size: 24px;
+  }
+  
+  .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .descriptionText {
+    font-size: 20px;
+  }
+}

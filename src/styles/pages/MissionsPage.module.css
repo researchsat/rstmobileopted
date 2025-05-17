@@ -1,0 +1,146 @@
+/* MissionsPage.module.css */
+.missionsPage {
+  position: relative;
+}
+
+.header {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  background-color: #17242D;
+  text-align: center;
+}
+
+.headerContent {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.textContainer {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.imageContainer {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.heroImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.missionSectionsContainer {
+  background-color: #000000;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.missionTypesWrapper {
+  background-color: #000000;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.missionTypesHeader {
+  max-width: 1280px;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+}
+
+.trustWallLabel {
+  color: #8a8a8a;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sectionTitle {
+  color: #f9f4fb;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .imageContainer {
+    margin-top: 2rem;
+  }
+
+  .missionSectionsContainer {
+    padding: 30px 0;
+    gap: 40px;
+  }
+
+  .missionTypesHeader {
+    margin-bottom: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    text-align: left;
+  }
+
+  .textContainer {
+    padding-right: 2rem;
+  }
+
+  .imageContainer {
+    height: 100%;
+  }
+
+  .heroImage {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .missionSectionsContainer {
+    padding: 20px 0;
+    gap: 30px;
+  }
+
+  .missionTypesHeader {
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .trustWallLabel {
+    font-size: 14px;
+  }
+}

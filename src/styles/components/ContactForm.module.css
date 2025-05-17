@@ -1,0 +1,161 @@
+/* ContactForm.module.css */
+.contactForm {
+  background-color: rgba(23, 36, 45, 0.9);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.contactForm h3 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.formControl {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid #626262;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #393939;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  transition: all 0.3s ease;
+}
+
+.formControl:focus {
+  border-color: #0E7369;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(14, 115, 105, 0.25);
+}
+
+.inputError {
+  border-color: #ff3241;
+}
+
+.errorText {
+  color: #ff3241;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+}
+
+.textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.submitButton {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0;
+  border: 0.125rem solid #0E7369;
+  border-radius: 2rem;
+  background-color: #0E7369;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: transparent;
+  color: #0E7369;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.resetButton {
+  display: inline-block;
+  padding: 1rem 0;
+  border: 0.125rem solid #626262;
+  border-radius: 2rem;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.resetButton:hover {
+  background-color: #626262;
+  color: #fff;
+}
+
+.successMessage {
+  background-color: rgba(40, 167, 69, 0.2);
+  border: 1px solid #28a745;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.successMessage i {
+  color: #28a745;
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.errorMessage {
+  background-color: rgba(220, 53, 69, 0.2);
+  border: 1px solid #dc3545;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.errorMessage i {
+  color: #dc3545;
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Animation for success and error messages */
+.successMessage, .errorMessage {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contactForm {
+    padding: 1.5rem;
+  }
+}

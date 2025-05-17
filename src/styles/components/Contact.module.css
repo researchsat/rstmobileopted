@@ -1,0 +1,147 @@
+/* Contact.module.css */
+.contactInfo {
+  background-color: rgba(23, 36, 45, 0.8);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.contactInfo h3 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.addressItem, .contactItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.addressItem i, .contactItem i {
+  color: #0E7369;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #0E7369;
+  color: #fff;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: #fff;
+  color: #0E7369;
+  transform: translateY(-3px);
+}
+
+.socialLink i {
+  font-size: 1rem;
+}
+
+.contactTabs {
+  height: 100%;
+}
+
+.tabsHeader {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.tabButton {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background-color: rgba(23, 36, 45, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tabButton:first-child {
+  margin-right: 0.5rem;
+}
+
+.tabButton i {
+  margin-right: 0.5rem;
+}
+
+.activeTab {
+  background-color: #0E7369;
+}
+
+.tabsContent {
+  height: calc(100% - 3rem);
+}
+
+.calendarContainer {
+  height: 100%;
+  min-height: 500px;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animation for tab transitions */
+.tabsContent {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .contactInfo {
+    margin-bottom: 2rem;
+  }
+  
+  .calendarContainer {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactInfo, .contactForm {
+    padding: 1.5rem;
+  }
+  
+  .tabButton {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .tabButton i {
+    margin-right: 0.25rem;
+  }
+  
+  .calendarContainer {
+    min-height: 350px;
+  }
+}

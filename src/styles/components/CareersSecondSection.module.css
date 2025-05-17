@@ -1,0 +1,499 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+  background-color: #121212;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.description {
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.textRegular {
+  color: #eeeeee;
+}
+
+.textHighlight {
+  color: #ef3b47;
+}
+
+.textItalic {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+}
+
+.bentoGrid {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.bentoRow {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  max-width: 1280px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(50, 50, 50, 1) 100%,
+    rgba(80, 80, 80, 1) 100.01%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  height: 380px;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 237px;
+  min-width: 237px;
+  position: relative;
+}
+
+.cardHeading {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-shrink: 0;
+  width: 237px;
+  position: relative;
+}
+
+.frameContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+
+.frameContainer2 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+
+.cardTitle {
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 47px;
+  line-height: 130%;
+  font-weight: 500;
+  position: relative;
+  flex: 1;
+}
+
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  height: 380px;
+  position: relative;
+}
+
+.card2 {
+  background: linear-gradient(
+    66.62deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(32, 39, 36, 1) 72.42%,
+    rgba(50, 50, 50, 1) 100%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  min-width: 285px;
+  min-height: 165px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoContainer {
+  width: 180px;
+  height: 45px;
+  position: relative;
+}
+
+.card3 {
+  background: linear-gradient(180deg, rgba(137, 16, 28, 1) 0%, rgba(255, 95, 104, 1) 100%);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  flex: 1;
+  min-width: 285px;
+  min-height: 165px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardTitle2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  position: relative;
+  width: 195px;
+}
+
+.card4 {
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(50, 50, 50, 1) 100%,
+    rgba(80, 80, 80, 1) 100.01%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex: 1;
+  height: 380px;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardTitle3 {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  position: relative;
+  width: 195px;
+}
+
+.card5 {
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(50, 50, 50, 1) 100%,
+    rgba(80, 80, 80, 1) 100.01%
+  );
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 380px;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardDetails2 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 237px;
+  min-width: 237px;
+  position: relative;
+}
+
+.cardTitle4 {
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  position: relative;
+  width: 195px;
+}
+
+.number {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 47px;
+  line-height: 130%;
+  font-weight: 500;
+  position: absolute;
+  left: 447px;
+  top: 58px;
+  z-index: 2;
+}
+
+.areasText {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  position: absolute;
+  left: 377px;
+  top: 124px;
+  z-index: 2;
+}
+
+.svgContainer1 {
+  opacity: 0.8;
+  width: 296px;
+  height: 296px;
+  position: absolute;
+  left: 655px;
+  top: 0px;
+  overflow: hidden;
+  mix-blend-mode: soft-light;
+  z-index: 1;
+}
+
+.svgImage1 {
+  width: 95.15%;
+  height: 61.15%;
+  position: absolute;
+  right: 2.42%;
+  left: 2.43%;
+  bottom: 19.42%;
+  top: 19.43%;
+  overflow: visible;
+}
+
+.svgContainer2 {
+  width: 305px;
+  height: 382px;
+  position: absolute;
+  left: 975px;
+  top: 18px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.svgInnerContainer {
+  opacity: 0.3;
+  width: 154px;
+  height: 139px;
+  position: absolute;
+  left: 151px;
+  top: 1px;
+  overflow: hidden;
+}
+
+.svgImage2 {
+  width: 85.37%;
+  height: 93.23%;
+  position: absolute;
+  right: 7.72%;
+  left: 6.91%;
+  bottom: 3.72%;
+  top: 3.05%;
+  overflow: visible;
+  mix-blend-mode: soft-light;
+}
+
+.svgContainer3 {
+  width: 305px;
+  height: 179px;
+  position: absolute;
+  left: 325px;
+  top: 21px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.svgImage3 {
+  opacity: 0.1;
+  width: 115.23%;
+  height: 96.28%;
+  position: absolute;
+  right: -15.38%;
+  left: 0.15%;
+  bottom: 3.72%;
+  top: 0%;
+  overflow: visible;
+  mix-blend-mode: soft-light;
+}
+
+.frameSvg {
+  width: 305px;
+  height: 358px;
+  position: absolute;
+  left: 0px;
+  top: 26px;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .bentoGrid {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .bentoRow {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .number,
+  .areasText,
+  .svgContainer1,
+  .svgContainer2,
+  .svgContainer3,
+  .frameSvg {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .textContainer {
+    align-items: center;
+  }
+
+  .bentoRow {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .card,
+  .card4,
+  .card5 {
+    height: 300px;
+  }
+
+  .columnContainer {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoRow {
+    flex-direction: column;
+  }
+
+  .card,
+  .card4,
+  .card5,
+  .columnContainer {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .cardTitle {
+    font-size: 36px;
+  }
+
+  .cardTitle2,
+  .cardTitle3,
+  .cardTitle4 {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    font-size: 14px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+  }
+
+  .cardTitle2,
+  .cardTitle3,
+  .cardTitle4 {
+    font-size: 18px;
+  }
+}

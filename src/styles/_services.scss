@@ -1,0 +1,57 @@
+// Services styles
+
+#services {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  
+  .footer {
+    background-color: #17232e;
+    padding-bottom: 4rem;
+    
+    .p-heading {
+      margin-bottom: 2rem;
+    }
+    
+    .footer-col {
+      margin-bottom: 2rem;
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+      }
+      
+      h4 {
+        margin-bottom: 1rem;
+      }
+      
+      p {
+        margin-bottom: 1.5rem;
+      }
+      
+      .list-unstyled {
+        margin-bottom: 2rem;
+        
+        .media {
+          margin-bottom: 0.5rem;
+          
+          .media-body {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(md) {
+  #services {
+    .footer {
+      .footer-col {
+        &.middle {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Mission - Test Form</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #222222;
+      color: #EEEEEE;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      color: #F7F7F7;
+    }
+    
+    .form-container {
+      background-color: #191A1D;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      color: #E2E2E2;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #8A8A8A;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      background-color: transparent;
+      border: 0.5px solid #8A8A8A;
+      border-radius: 6px;
+      color: #E2E2E2;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+    }
+    
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    button {
+      display: inline-block;
+      padding: 16px 32px;
+      background-color: transparent;
+      border: 1px solid #FFFFFF;
+      border-radius: 8px;
+      color: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .success-message {
+      color: #4CAF50;
+      margin-top: 15px;
+      display: none;
+    }
+    
+    .error-message {
+      color: #FF3241;
+      margin-top: 15px;
+      display: none;
+    }
+    
+    .contact-info {
+      margin-top: 40px;
+    }
+    
+    .contact-title {
+      font-size: 14px;
+      color: #8A8A8A;
+      margin-bottom: 10px;
+    }
+    
+    .email-link {
+      display: block;
+      font-size: 14px;
+      color: #FF3241;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    
+    .phone-number {
+      font-size: 14px;
+      color: #E2E2E2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Book a Mission</h1>
+    
+    <div class="form-container">
+      <h2>Not quite ready to pencil in a meeting?</h2>
+      <p>No worries—we've got your back! Simply fill out our form, and we'll take it from there.</p>
+      
+      <form id="mission-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="contact">Contact</label>
+          <input type="text" id="contact" name="contact" placeholder="00-0000-0000" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Enter your message here" required></textarea>
+        </div>
+        
+        <button type="submit">Submit</button>
+        
+        <p id="success-message" class="success-message">Your message has been sent successfully!</p>
+        <p id="error-message" class="error-message">There was an error sending your message. Please try again.</p>
+      </form>
+    </div>
+    
+    <div class="contact-info">
+      <p class="contact-title">Reach us @</p>
+      <a href="mailto:info@researchsat.space" class="email-link">info@researchsat.space</a>
+      <p class="phone-number">+91.124.469.8900</p>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('mission-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const message = document.getElementById('message').value;
+      
+      // Log the form data (simulating form submission)
+      console.log('Form submitted with data:', {
+        name: name,
+        contact: contact,
+        message: message,
+        to: 'info@researchsat.space'
+      });
+      
+      // Show success message
+      document.getElementById('success-message').style.display = 'block';
+      
+      // Reset form
+      this.reset();
+      
+      // Hide success message after 3 seconds
+      setTimeout(function() {
+        document.getElementById('success-message').style.display = 'none';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

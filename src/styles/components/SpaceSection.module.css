@@ -1,0 +1,261 @@
+/* SpaceSection.module.css */
+.spaceSection {
+  position: relative;
+  height: 735px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Left Content */
+.leftContent {
+  position: absolute;
+  left: 80px;
+  top: 84px;
+  width: 725px;
+}
+
+.microbiologyText {
+  color: #eeeeee;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.spaceText {
+  font-size: 33px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.spaceHighlight {
+  color: #ef3b47;
+}
+
+/* Right Content */
+.rightContent {
+  position: absolute;
+  right: 80px;
+  top: 306px;
+  width: 418px;
+  text-align: right;
+}
+
+.partnerTitle {
+  color: #eeeeee;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #8a8a8a;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+/* Partner Logos */
+.partnerLogosContainer {
+  position: absolute;
+  bottom: 78px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  padding-left: 80px;
+}
+
+.partnerLogos {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee 9.6s linear infinite; /* 600ms per logo for 16 logos */
+  will-change: transform;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move to the left by exactly half the width (first set of logos) */
+  }
+}
+
+.logoItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px; /* Fixed width for consistent spacing */
+  height: 80px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoGroup:first-child {
+  margin-right: 120px;
+}
+
+.partnerLogo {
+  opacity: 0.8;
+  object-fit: contain;
+  background-color: transparent;
+  max-width: 120px;
+  max-height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.logoItem:hover .partnerLogo {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .leftContent {
+    width: 600px;
+  }
+
+  .spaceText {
+    font-size: 28px;
+  }
+
+  .rightContent {
+    width: 350px;
+  }
+
+  .partnerTitle {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .partnerLogo:nth-child(n) {
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .spaceSection {
+    height: 900px;
+  }
+
+  .leftContent {
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
+  .rightContent {
+    width: 100%;
+    position: relative;
+    right: 0;
+    top: 400px;
+    text-align: left;
+  }
+
+  .partnerLogosContainer {
+    bottom: 40px;
+  }
+
+  .logoItem {
+    margin-right: 20px;
+    height: 60px;
+  }
+
+  .partnerLogo {
+    max-height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .spaceSection {
+    height: 800px;
+  }
+
+  .spaceText {
+    font-size: 24px;
+  }
+
+  .partnerTitle {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .logoItem {
+    margin-right: 15px;
+    height: 50px;
+  }
+
+  .partnerLogo {
+    max-height: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .spaceSection {
+    height: 700px;
+  }
+
+  .spaceText {
+    font-size: 20px;
+  }
+
+  .partnerTitle {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .logoItem {
+    margin-right: 10px;
+    height: 40px;
+  }
+
+  .partnerLogo {
+    max-height: 20px;
+  }
+}

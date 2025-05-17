@@ -1,0 +1,1 @@
+function t(){document.querySelectorAll("a.page-scroll").forEach((t=>{t.addEventListener("click",(function(t){t.preventDefault();const e=this.getAttribute("href");if(e.startsWith("#")){const t=document.querySelector(e);t&&window.scrollTo({top:t.offsetTop,behavior:"smooth"})}else window.location.href=e}))}))}t();export{t as default};

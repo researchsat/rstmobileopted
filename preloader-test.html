@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader Test</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #17242D;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .content {
+            padding: 2rem;
+            text-align: center;
+            padding-top: 100px;
+        }
+        
+        /* Preloader */
+        .spinner-wrapper {
+            position: fixed;
+            z-index: 999999;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #17242D;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        
+        .spinner-wrapper .spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 3.75rem;
+            height: 3.75rem;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Animation for the SVG elements */
+        .cls-1, .cls-2 {
+            animation: pulse 2s infinite alternate;
+        }
+        
+        .cls-1 {
+            fill: #677d7c;
+            stroke: #677d7c;
+        }
+        
+        .cls-2 {
+            fill: #ff3241;
+            stroke: #ff3241;
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes pulse {
+            0% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="100%" 
+                height="100%" 
+                viewBox="0 0 30.999999 44.000001" 
+                version="1.1" 
+                id="svg8"
+            >
+                <g id="layer1">
+                    <g id="g922" transform="matrix(0.09925534,0,0,0.09925534,-13.178261,8.3102987)">
+                        <path 
+                            id="path894" 
+                            d="m 313.61289,166.52043 -22.75416,-45.08235 c -9.49325,3.91054 -18.29329,7.14375 -26.73879,11.1125 -4.16455,1.96056 -7.62,2.41829 -10.54894,1.69069 l -5.35517,7.08289 c 18.62667,11.31888 41.10831,16.30098 65.39706,25.19627 z" 
+                            class="cls-1"
+                        />
+                        <path 
+                            id="path896" 
+                            d="M 243.55917,124.04423 C 232.33554,99.84808 238.79667,76.419226 261.38679,62.031185 251.26648,41.91756 241.74148,22.420415 231.60794,3.2566439 c -2.0955,-3.96874992 -5.87904,-8.2020832 -9.88484,-9.7895832 -20.73539,-8.2020837 -41.80416,-15.5945417 -65.55316,-24.2940417 4.23333,8.098896 7.23106,13.697479 10.09385,19.364854 19.73527,39.092187 39.20067,78.316666 59.29313,117.231587 6.51668,12.62062 11.85862,28.99833 22.65891,35.56264 l 5.35517,-7.0829 c -4.318,-1.08214 -7.48506,-4.75456 -10.01183,-10.20497 z" 
+                            class="cls-2"
+                        />
+                        <path 
+                            id="path898" 
+                            d="M 411.27589,186.84837 C 391.54062,147.75618 372.07523,108.53171 351.98277,69.616789 345.47402,56.99881 340.13208,40.621102 329.33179,34.056789 l -5.35517,7.082896 c 4.318,1.074208 7.48507,4.7625 10.01184,10.197042 11.22362,24.196145 4.7625,47.624999 -17.82763,62.013043 10.12031,20.11362 19.64531,39.61077 29.77886,58.77454 2.0955,3.96875 5.87904,8.20208 9.88483,9.78958 20.73539,8.20208 41.80416,15.59454 65.55316,24.29404 -4.22539,-8.09096 -7.23106,-13.68954 -10.10179,-19.35956 z" 
+                            class="cls-1"
+                        />
+                        <path 
+                            id="path900" 
+                            d="m 263.93473,8.8605189 22.75416,45.0823531 c 9.49325,-3.910541 18.2933,-7.143749 26.7388,-11.112499 4.16454,-1.960563 7.62,-2.418292 10.54893,-1.690688 l 5.35517,-7.082896 C 310.70512,22.737915 288.22348,17.75581 263.93473,8.8605189 Z" 
+                            class="cls-2"
+                        />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>ResearchSat</h1>
+        <p>This is a test page to demonstrate the preloader functionality.</p>
+    </div>
+    
+    <script>
+        // Function to hide preloader
+        const hidePreloader = () => {
+            const preloaderFadeOutTime = 500;
+            const preloader = document.querySelector('.spinner-wrapper');
+            
+            if (preloader) {
+                // Add transition for smooth fade out
+                preloader.style.transition = 'opacity ' + preloaderFadeOutTime + 'ms';
+                preloader.style.opacity = '0';
+                
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, preloaderFadeOutTime);
+            }
+        };
+
+        // Hide preloader when DOM is fully loaded
+        if (document.readyState === 'complete') {
+            hidePreloader();
+        } else {
+            window.addEventListener('load', hidePreloader);
+            
+            // Fallback - hide preloader after 3 seconds even if page isn't fully loaded
+            setTimeout(hidePreloader, 3000);
+        }
+    </script>
+</body>
+</html>

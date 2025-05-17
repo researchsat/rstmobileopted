@@ -1,0 +1,227 @@
+/* AboutPage.module.css */
+.aboutPage {
+  position: relative;
+}
+
+.heroSection {
+  position: relative;
+  height: 780px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  margin-bottom: 90px;
+}
+
+.heroBackground {
+  width: 100%;
+  height: 522px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  opacity: 0.9; /* Reduced opacity by 10% */
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); /* Darkened overlay */
+}
+
+.gradientOverlay {
+  background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  width: 100vw; /* Full width of the screen */
+  height: 85px;
+  position: absolute;
+  left: 0;
+  top: 485px;
+  filter: blur(20px); /* Changed from 25px to 20px */
+  flex-shrink: 0;
+}
+
+.contentContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  left: 80px;
+  top: 239px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.aboutLabel {
+  color: var(--secondary-color, #ff3241);
+  text-align: left;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 500; /* Increased from 400 to 500 */
+  margin-bottom: 5px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); /* Added text shadow for better contrast */
+}
+
+.heroTitle {
+  color: #ffffff;
+  text-align: left;
+  font-size: 58px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  width: 959px;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for better contrast */
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1280px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 602px;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  align-self: stretch;
+}
+
+.descriptionText {
+  color: #ffffff; /* Changed from #eeeeee to pure white for better contrast */
+  text-align: right;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6); /* Added text shadow for better contrast */
+}
+
+.solutionsLink {
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: 0.25px;
+  background: linear-gradient(180deg, rgba(187, 222, 208, 1) 0%, rgba(135, 194, 170, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  color: #BBDED0; /* Fallback color in case gradient doesn't work */
+}
+
+.solutionsLink:hover {
+  opacity: 0.8;
+}
+
+.descriptionLabel {
+  background: linear-gradient(180deg, rgba(187, 222, 208, 1) 0%, rgba(135, 194, 170, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: right;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  width: 305px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.descriptionLabel:hover {
+  opacity: 0.8;
+}
+
+.footerMargin {
+  margin-bottom: 60px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 48px;
+    width: 800px;
+  }
+
+  .contentContainer {
+    padding: 0 40px;
+  }
+
+  .heroContent {
+    left: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .heroSection {
+    height: auto;
+    padding-bottom: 400px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .bottomContainer {
+    position: relative;
+    top: auto;
+    margin-top: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .descriptionText {
+    font-size: 18px;
+  }
+
+  .contentContainer {
+    padding: 0 20px;
+  }
+
+  .heroContent {
+    left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .descriptionText {
+    font-size: 16px;
+  }
+
+  .descriptionLabel {
+    width: 250px;
+  }
+}

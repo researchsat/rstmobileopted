@@ -1,0 +1,450 @@
+/* PartnershipsPage.module.css */
+
+/* General Styles */
+.sectionContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  position: relative;
+}
+
+.sectionHeader {
+  margin-bottom: 60px;
+  max-width: 800px;
+}
+
+.sectionLabel {
+  color: #8a8a8a;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  color: #f9f4fb;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.sectionDescription {
+  color: #e0e0e0;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  height: 541px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  height: 476px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.blurOverlay {
+  margin-top: -20px;
+  background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  width: 100%;
+  height: 85px;
+  position: relative;
+  filter: blur(25px);
+}
+
+.gradientOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, #121212 100%);
+  z-index: 2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  max-width: 1280px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 311px;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.label {
+  color: #ef3b47;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+.title {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 33px;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  max-width: 955px;
+}
+
+/* Featured Partners Section */
+.featuredPartnersSection {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.partnersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.partnerCard {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partnerCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.partnerImageContainer {
+  height: 200px;
+  overflow: hidden;
+}
+
+.partnerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.partnerCard:hover .partnerImage {
+  transform: scale(1.05);
+}
+
+.partnerInfo {
+  padding: 24px;
+}
+
+.partnerName {
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.partnerDescription {
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+/* Benefits Section */
+.benefitsSection {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefitCard {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.benefitIcon {
+  width: 57px;
+  height: 57px;
+  margin-bottom: 20px;
+}
+
+.benefitIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.benefitCard:hover .benefitIcon img {
+  transform: scale(1.1);
+}
+
+.benefitTitle {
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.benefitDescription {
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+/* Process Section */
+.processSection {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.processSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.processStep {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px;
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.processStep:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stepNumber {
+  font-size: 48px;
+  font-weight: 700;
+  color: #8a8a8a;
+  line-height: 1;
+  min-width: 70px;
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepTitle {
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.stepDescription {
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+/* Contact Section */
+.contactSection {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.contactContent {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.contactInfo {
+  flex: 1;
+}
+
+.contactDescription {
+  color: #e0e0e0;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.contactButton {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #121212;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.contactImageContainer {
+  flex: 1;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.contactImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+
+.contactImageContainer:hover .contactImage {
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .sectionContainer {
+    padding: 60px 40px;
+  }
+
+  .heroTitle {
+    font-size: 54px;
+  }
+
+  .sectionTitle {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sectionContainer {
+    padding: 50px 30px;
+  }
+
+  .heroTitle {
+    font-size: 48px;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+
+  .contactContent {
+    flex-direction: column;
+  }
+
+  .contactInfo, .contactImageContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: 40px 20px;
+  }
+
+  .heroTitle {
+    font-size: 40px;
+  }
+
+  .heroDescription {
+    font-size: 18px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .processStep {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stepNumber {
+    font-size: 36px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .partnersGrid, .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}

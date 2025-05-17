@@ -1,0 +1,16 @@
+/* Add padding to body to account for fixed navigation */
+body {
+  padding-top: 72px; /* Adjust this value based on your navigation height */
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 64px; /* Smaller padding for mobile */
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 56px; /* Even smaller padding for small mobile */
+  }
+}

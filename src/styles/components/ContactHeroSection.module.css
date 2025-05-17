@@ -1,0 +1,133 @@
+.heroSection {
+  position: relative;
+  height: 541px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  height: 476px;
+  object-fit: cover;
+  filter: brightness(0.7);
+  transform: scaleX(-1);
+}
+
+.blurOverlay {
+  margin-top: -20px;
+  background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  width: 100%;
+  height: 85px;
+  position: relative;
+  filter: blur(25px);
+}
+
+.gradientOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, #121212 100%);
+  z-index: 2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  max-width: 1280px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 311px;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.label {
+  color: #ef3b47;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+.title {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 33px;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  max-width: 955px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 450px;
+  }
+
+  .heroImage {
+    height: 400px;
+  }
+
+  .container {
+    top: 250px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 400px;
+  }
+
+  .heroImage {
+    height: 350px;
+  }
+
+  .container {
+    top: 220px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

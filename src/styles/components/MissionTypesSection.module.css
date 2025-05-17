@@ -1,0 +1,321 @@
+.missionTypesSection {
+  background-color: #000000;
+  padding: 60px 0;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.sectionSubtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #5f7371;
+}
+
+.sectionDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #cfd4d5;
+}
+
+.missionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.missionItem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.missionItem:last-child {
+  border-bottom: none;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+.missionContent {
+  flex: 1;
+  min-width: 300px;
+}
+
+.missionTitle {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.missionSubtitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #5f7371;
+}
+
+.missionDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #cfd4d5;
+}
+
+.missionFeatures {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.missionTypeItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.checkIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url('/src/assets/images/check-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.checkIcon::before {
+  content: '✓';
+  color: #ff3241;
+}
+
+.missionTypeContent {
+  flex: 1;
+}
+
+.missionTypeTitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cfd4d5;
+}
+
+.missionTypeDuration {
+  font-size: 16px;
+  color: #cfd4d5;
+  margin-left: 5px;
+}
+
+.missionTypeDescription {
+  font-size: 14px;
+  color: #8a8a8a;
+  margin-top: 5px;
+}
+
+.missionApplications {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #cfd4d5;
+}
+
+.applicationTitle {
+  color: #ff3241;
+  font-weight: 600;
+}
+
+.learnMoreButton {
+  display: inline-block;
+  background-color: #ff3241;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.learnMoreButton:hover {
+  background-color: #107e7d;
+}
+
+.missionImageContainer {
+  flex: 1;
+  min-width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.missionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.missionImageContainer:hover .missionImage {
+  transform: scale(1.05);
+}
+
+.callToAction {
+  text-align: center;
+  margin-top: 60px;
+  padding: 60px 0;
+  background-color: rgba(18, 18, 18, 0.5);
+  border-radius: 8px;
+}
+
+.ctaTitle {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.ctaDescription {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #cfd4d5;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: #107e7d;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ff3241;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .sectionTitle {
+    font-size: 32px;
+  }
+  
+  .missionTitle {
+    font-size: 24px;
+  }
+  
+  .missionItem {
+    padding: 30px 0;
+  }
+  
+  .callToAction {
+    padding: 40px 0;
+  }
+  
+  .ctaTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .missionTypesSection {
+    padding: 40px 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+  }
+  
+  .sectionSubtitle {
+    font-size: 16px;
+  }
+  
+  .missionsList {
+    gap: 40px;
+  }
+  
+  .missionItem {
+    gap: 30px;
+  }
+  
+  .missionImageContainer {
+    height: 250px;
+  }
+  
+  .ctaTitle {
+    font-size: 24px;
+  }
+  
+  .ctaDescription {
+    font-size: 16px;
+  }
+  
+  .ctaButton {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .missionTypesSection {
+    padding: 30px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+  }
+  
+  .missionTitle {
+    font-size: 20px;
+  }
+  
+  .missionItem {
+    padding: 20px 0;
+  }
+  
+  .missionImageContainer {
+    height: 200px;
+  }
+  
+  .callToAction {
+    padding: 30px 0;
+  }
+  
+  .ctaTitle {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,121 @@
+.contactSection {
+  background: #222222;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 351px;
+  row-gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 47px;
+  line-height: 130%;
+  font-weight: 500;
+  position: relative;
+  width: 300px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+}
+
+.descriptionText {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.grayText {
+  color: #8a8a8a;
+}
+
+.lightText {
+  color: #cfd4d5;
+}
+
+.contactButton {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 14px 28px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 229px;
+  height: 40px;
+  min-width: 120px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.contactButton:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.buttonText {
+  color: #323232;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .contactSection {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 60px 40px;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 40px 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+  }
+  
+  .contactButton {
+    width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+.contactPage {
+  position: relative;
+  background-color: #000000;
+}
+
+.footerMargin {
+  margin-bottom: 60px;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .footerMargin {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerMargin {
+    margin-bottom: 30px;
+  }
+}

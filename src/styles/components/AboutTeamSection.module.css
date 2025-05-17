@@ -1,0 +1,287 @@
+.teamSection {
+  height: 881px;
+  position: relative;
+  background-color: #000000;
+  padding: 80px 0;
+}
+
+.sectionTitle {
+  color: #f7f7f7;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 33px;
+  line-height: 140%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  position: relative;
+  width: 1320px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.sectionSubtitle {
+  color: #cfd4d5;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: relative;
+  width: 1320px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.carouselContainer {
+  opacity: 0.75;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 1320px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carouselWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+.teamGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.missionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carouselRow {
+  width: 100%;
+  height: 277px;
+  position: relative;
+  overflow-x: auto;
+  display: flex;
+  gap: 16px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.carouselRow::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.card {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(to left, #374240, #374240);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
+  height: 277px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  align-self: stretch;
+  flex: 1;
+  min-width: 237px;
+  position: relative;
+}
+
+.cardHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.cardTitle {
+  color: #eeeeee;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.cardName {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.arrowIcon {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+  mix-blend-mode: screen;
+}
+
+.missionCard {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(to left, #374240, #374240);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 305px;
+  height: 277px;
+  min-width: 285px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.missionDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-width: 237px;
+  position: relative;
+}
+
+.missionCategory {
+  color: #eeeeee;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.missionTitle {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .sectionTitle, .sectionSubtitle, .carouselContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .teamSection {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .sectionSubtitle {
+    font-size: 14px;
+  }
+
+  .carouselRow {
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .card, .missionCard {
+    width: 100%;
+  }
+}

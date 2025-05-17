@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="menu-grid" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="dot-1" fill="#ABABAB" x="5" y="5" width="4" height="4" rx="1"></rect>
+        <rect id="dot-2" fill="#ABABAB" x="10" y="5" width="4" height="4" rx="1"></rect>
+        <rect id="dot-3" fill="#ABABAB" x="15" y="5" width="4" height="4" rx="1"></rect>
+        <rect id="dot-4" fill="#ABABAB" x="5" y="10" width="4" height="4" rx="1"></rect>
+        <rect id="dot-5" fill="#ABABAB" x="10" y="10" width="4" height="4" rx="1"></rect>
+        <rect id="dot-6" fill="#ABABAB" x="15" y="10" width="4" height="4" rx="1"></rect>
+        <rect id="dot-7" fill="#ABABAB" x="5" y="15" width="4" height="4" rx="1"></rect>
+        <rect id="dot-8" fill="#ABABAB" x="10" y="15" width="4" height="4" rx="1"></rect>
+        <rect id="dot-9" fill="#ABABAB" x="15" y="15" width="4" height="4" rx="1"></rect>
+    </g>
+</svg>

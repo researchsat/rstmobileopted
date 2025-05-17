@@ -1,0 +1,270 @@
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.lightboxContainer {
+  background-color: #17242d;
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  border-radius: 24px;
+  padding: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #ff3241;
+}
+
+.lightboxContent {
+  display: flex;
+  flex-direction: row;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.imageSection {
+  flex: 1;
+  max-width: 50%;
+}
+
+.payloadImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+}
+
+.contentSection {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.headerContainer {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.payloadLabel {
+  color: #8a8a8a;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.payloadTitle {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.payloadSubtitle {
+  color: #bcd8d5;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #687e7c;
+  margin: 10px 0;
+}
+
+.featuresContainer {
+  margin-bottom: 20px;
+}
+
+.featuresTitle {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.featuresList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.checkIcon {
+  color: #ff3241;
+  margin-right: 10px;
+}
+
+.checkIcon::before {
+  content: "✓";
+}
+
+.featureText {
+  color: #bcd8d5;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.applicationsContainer {
+  margin-bottom: 20px;
+}
+
+.applicationsTitle {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.applicationsText {
+  color: #bcd8d5;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.contactButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 7.5px;
+  min-width: 120px;
+  height: 51px;
+  border: 1px solid #ff3241;
+  border-radius: 8px;
+  background: #ff3241;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  color: #fffef6;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background: #fffef6;
+  border-color: #fffef6;
+  color: #17242d;
+}
+
+.backButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 7.5px;
+  min-width: 120px;
+  height: 51px;
+  background: transparent;
+  border: 1px solid #fffef6;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  color: #fffef6;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #17242d;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .lightboxContent {
+    flex-direction: column;
+  }
+
+  .imageSection {
+    max-width: 100%;
+  }
+
+  .payloadImage {
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttonsContainer {
+    flex-direction: column;
+  }
+
+  .contactButton, .backButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightboxContainer {
+    border-radius: 16px;
+  }
+
+  .contentSection {
+    padding: 20px;
+  }
+
+  .payloadTitle {
+    font-size: 20px;
+  }
+}

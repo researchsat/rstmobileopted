@@ -1,0 +1,194 @@
+/* AboutThirdSection.module.css */
+.sectionContainer {
+  height: 602px;
+  position: relative;
+  background-color: #000000;
+  padding: 77px 0;
+}
+
+.contentWrapper {
+  width: 1280px;
+  height: 445px;
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.visionRow {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 351px;
+  row-gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.missionRow {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 351px;
+  row-gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+}
+
+.title {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 47px;
+  line-height: 130%;
+  font-weight: 500;
+  position: relative;
+  width: 300px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 285px;
+  position: relative;
+}
+
+.description {
+  color: #8a8a8a;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.highlight {
+  background: rgba(54, 54, 54, 0.5);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 400px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.boltIcon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+}
+
+.highlightText {
+  color: #eeeeee;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .contentWrapper {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .visionRow, .missionRow {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sectionContainer {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .contentWrapper {
+    height: auto;
+  }
+
+  .missionRow {
+    margin-top: 60px;
+  }
+
+  .visionRow, .missionRow {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .highlight {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+}

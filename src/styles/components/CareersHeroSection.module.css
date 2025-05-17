@@ -1,0 +1,256 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 799px;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 753px;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.gradientOverlay {
+  background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+  height: 85px;
+  position: absolute;
+  left: 0;
+  bottom: 46px;
+  filter: blur(25px);
+}
+
+.gradientOverlay_1y99l_28 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%, rgba(18, 18, 18, 1) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1280px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 149px;
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.careers {
+  color: #ef3b47;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.titleContainer {
+  width: 100%;
+  max-width: 730px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.title {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 58px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  position: relative;
+  margin: 0;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  position: relative;
+  margin-top: 16px;
+}
+
+.subtitle {
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  position: relative;
+}
+
+.subtitleText {
+  color: #ffffff;
+}
+
+.subtitleHighlight {
+  color: #ef3b47;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffffff;
+}
+
+.button:hover .buttonText {
+  color: #000000;
+}
+
+.buttonIcon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  transition: all 0.3s ease;
+  /* Using off-white color #fffef6 */
+  filter: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(1090%) hue-rotate(298deg) brightness(113%) contrast(96%);
+}
+
+.button:hover .buttonIcon {
+  filter: brightness(0);
+}
+
+.buttonText {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .heroSection {
+    height: 700px;
+  }
+
+  .heroImage {
+    height: 650px;
+  }
+
+  .title {
+    font-size: 48px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .container {
+    top: 100px;
+  }
+
+  .gradientOverlay_1y99l_28 {
+    height: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 600px;
+  }
+
+  .heroImage {
+    height: 550px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 12px 24px;
+  }
+
+  .buttonText {
+    font-size: 14px;
+  }
+
+  .gradientOverlay_1y99l_28 {
+    height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 500px;
+  }
+
+  .heroImage {
+    height: 450px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .container {
+    top: 80px;
+    padding: 0 20px;
+  }
+
+  .contentContainer {
+    gap: 20px;
+    width: 100%;
+  }
+
+  .button {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .gradientOverlay_1y99l_28 {
+    height: 500px;
+  }
+}

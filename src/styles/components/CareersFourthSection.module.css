@@ -1,0 +1,334 @@
+.container {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+  background-color: #001718;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleContainer {
+  padding: 48px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 351px;
+  row-gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+}
+
+.title {
+  background: linear-gradient(180deg, rgba(187, 222, 208, 1) 0%, rgba(135, 194, 170, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 47px;
+  line-height: 130%;
+  font-weight: 500;
+  position: relative;
+  width: 300px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 53px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  max-width: 1280px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.linkedinIcon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.jobsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+
+.jobsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+
+.jobItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-width: 285px;
+  position: relative;
+  width: 100%;
+}
+
+.jobItem:first-child .jobItemInner {
+  padding-top: 0;
+}
+
+.jobItemInner {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-image: linear-gradient(90deg, rgba(50, 50, 50, 1) 0%, rgba(50, 50, 50, 1) 100%, rgba(80, 80, 80, 1) 100.01%);
+  border-image-slice: 1;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+
+.jobItemContent {
+  display: flex;
+  flex-direction: row;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.jobDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 240px;
+  position: relative;
+}
+
+.jobTitle {
+  background: linear-gradient(180deg, rgba(187, 222, 208, 1) 0%, rgba(135, 194, 170, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+
+.jobExperience {
+  color: #d0d0d0;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+
+.jobDate {
+  color: #d0d0d0;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+  position: relative;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 120px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffffff;
+}
+
+.button:hover .buttonText {
+  color: #001718;
+}
+
+.buttonIcon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(1090%) hue-rotate(298deg) brightness(113%) contrast(96%);
+  transition: filter 0.3s ease;
+}
+
+.button:hover .buttonIcon {
+  filter: brightness(0);
+}
+
+.buttonText {
+  color: #ffffff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .contentContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .jobsContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 36px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 0;
+  }
+  
+  .titleContainer {
+    padding: 0 20px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .contentContainer {
+    gap: 20px;
+  }
+  
+  .jobDate {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+  
+  .headerContainer {
+    width: 100%;
+  }
+  
+  .button {
+    width: 100%;
+  }
+  
+  .jobTitle {
+    font-size: 14px;
+  }
+  
+  .jobExperience {
+    font-size: 12px;
+  }
+  
+  .jobDate {
+    font-size: 12px;
+  }
+}

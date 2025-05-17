@@ -1,0 +1,194 @@
+.secondSection {
+  background-color: #080809;
+  background-image: url('../../assets/images/bloghr-1.svg');
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 580px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 40px;
+  height: 100%;
+}
+
+.textColumn {
+  flex: 0 0 30%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.description {
+  color: #bcd8d5;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  flex: 0 0 65%;
+  max-width: 65%;
+}
+
+.featureCard {
+  background-color: rgba(23, 36, 45, 0.7);
+  border: 1px solid #687e7c;
+  border-radius: 18px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: #ff3241;
+}
+
+.featureIcon {
+  color: #ff3241;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.featureTitle {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.featureDescription {
+  color: #bcd8d5;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .textColumn {
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+
+  .featuresGrid {
+    flex: 0 0 60%;
+    max-width: 60%;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .secondSection {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .textColumn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .featuresGrid {
+    flex: 0 0 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .secondSection {
+    padding: 50px 0;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .secondSection {
+    padding: 40px 0;
+  }
+
+  .featureCard {
+    padding: 15px;
+  }
+
+  .featureIcon {
+    font-size: 1.5rem;
+  }
+
+  .featureTitle {
+    font-size: 1.1rem;
+  }
+
+  .featureDescription {
+    font-size: 0.85rem;
+  }
+}
