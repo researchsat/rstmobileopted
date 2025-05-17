@@ -1,0 +1,10 @@
+version: '1'
+build:
+  dockerfile: Dockerfile.dokploy
+  context: .
+deploy:
+  replicas: 1
+  port: 8080
+  env:
+    - name: NODE_ENV
+      value: production
