@@ -6,6 +6,16 @@ mkdir -p /etc/nginx/conf.d
 # Create a symbolic link to enable our site
 ln -sf /etc/nginx/conf.d/default.conf /etc/nginx/sites-enabled/default
 
+# Set proper permissions for the web root
+chown -R www-data:www-data /var/www/html
+chmod -R 755 /var/www/html
+
+# Ensure assets directory has proper permissions
+if [ -d "/var/www/html/assets" ]; then
+    find /var/www/html/assets -type f -exec chmod 644 {} \;
+    find /var/www/html/assets -type d -exec chmod 755 {} \;
+fi
+
 # Check if nginx config is valid
 nginx -t
 
