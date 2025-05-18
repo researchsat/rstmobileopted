@@ -16,6 +16,11 @@ if [ -d "/var/www/html/assets" ]; then
     find /var/www/html/assets -type d -exec chmod 755 {} \;
 fi
 
+# Create a symbolic link from /var/www/html/src to /var/www/html
+# This is to fix path issues with image references
+mkdir -p /var/www/html/src
+ln -sf /var/www/html/assets /var/www/html/src/assets
+
 # Check if nginx config is valid
 nginx -t
 
