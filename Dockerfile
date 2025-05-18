@@ -29,7 +29,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Remove default nginx config
-RUN rm -rf /etc/nginx/sites-enabled/default
+RUN rm -rf /etc/nginx/sites-enabled/default && \
+    rm -rf /etc/nginx/sites-available/default
 
 # Copy built assets from the build stage
 COPY --from=build /app/dist /var/www/html
@@ -63,6 +64,10 @@ RUN if [ -f /app/src/assets/images/partnerships/unsplash-s-3-h-qu-5-yjg1.png ]; 
 RUN if [ -f /app/src/assets/images/features/image-18690.png ]; then \
     cp /app/src/assets/images/features/image-18690.png /var/www/html/src/assets/images/features/; \
     fi
+
+# Copy astronaut.png image
+RUN mkdir -p /var/www/html/src/assets/images
+COPY ./src/assets/images/astronaut.png /var/www/html/src/assets/images/
 
 # Copy custom nginx config
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf

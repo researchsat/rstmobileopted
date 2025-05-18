@@ -46,11 +46,7 @@ const PartnershipsSection = () => {
 
             {/* Bottom Card */}
             <div className={styles.bottomCard}>
-              <img
-                src="/src/assets/images/partnerships/mission_3.jpg"
-                alt="Mission"
-                className={styles.cardImage}
-              />
+
               <div className={styles.cardOverlay}>
                 <div className={styles.cardCategory}>Missions</div>
                 <div className={styles.cardTitle}>Orbital Mission - Duration: 9 weeks</div>
@@ -61,11 +57,7 @@ const PartnershipsSection = () => {
           {/* Right Column */}
           <div className={styles.rightColumn}>
             <div className={styles.largeCard}>
-              <img
-                src="/src/assets/images/partnerships/unsplash-s-3-h-qu-5-yjg1.png"
-                alt="Atmospheric Mission"
-                className={styles.cardImage}
-              />
+              <img src="/src/assets/images/astronaut.png" alt="Astronaut" className={styles.largeCardImage} />
               <div className={styles.cardOverlay}>
                 <div className={styles.cardCategory}>Missions</div>
                 <div className={styles.cardTitle}>ISS Missions - Duration: 9 Months</div>
