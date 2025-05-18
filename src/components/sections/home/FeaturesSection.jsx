@@ -125,8 +125,8 @@ const FeaturesSection = () => {
         {/* Feature Image */}
         <div className={styles.imageContainer}>
           <img
-            src="/src/assets/images/features/image-18690.png"
-            alt="Microgravity platform"
+            src="/src/assets/images/astronaut.png"
+            alt="Astronaut in space"
             className={styles.featureImage}
           />
 
