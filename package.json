@@ -16,7 +16,8 @@
     "test:coverage": "jest --coverage",
     "convert-images": "node scripts/convert-to-webp.js",
     "fix-source-maps": "node scripts/fix-source-maps.js",
-    "prebuild": "npm run convert-images"
+    "prebuild": "npm run convert-images",
+    "postbuild": "node scripts/copy-assets.js"
   },
   "keywords": [
     "researchsat",
