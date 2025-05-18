@@ -57,7 +57,7 @@ const PartnershipsSection = () => {
           {/* Right Column */}
           <div className={styles.rightColumn}>
             <div className={styles.largeCard}>
-              <img src="/src/assets/images/astronaut.png" alt="Astronaut" className={styles.largeCardImage} />
+              <img src="/src/assets/images/partnerships/Missionastronaut.png" alt="Astronaut on Mission" className={styles.largeCardImage} />
               <div className={styles.cardOverlay}>
                 <div className={styles.cardCategory}>Missions</div>
                 <div className={styles.cardTitle}>ISS Missions - Duration: 9 Months</div>

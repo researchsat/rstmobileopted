@@ -65,9 +65,10 @@ RUN if [ -f /app/src/assets/images/features/image-18690.png ]; then \
     cp /app/src/assets/images/features/image-18690.png /var/www/html/src/assets/images/features/; \
     fi
 
-# Copy astronaut.png image
-RUN mkdir -p /var/www/html/src/assets/images
+# Copy astronaut images
+RUN mkdir -p /var/www/html/src/assets/images /var/www/html/src/assets/images/partnerships
 COPY ./src/assets/images/astronaut.png /var/www/html/src/assets/images/
+COPY ./src/assets/images/partnerships/Missionastronaut.png /var/www/html/src/assets/images/partnerships/
 
 # Copy custom nginx config
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
