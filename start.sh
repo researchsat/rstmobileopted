@@ -21,6 +21,18 @@ fi
 mkdir -p /var/www/html/src
 ln -sf /var/www/html/assets /var/www/html/src/assets
 
+# Ensure the hubbletelescope.png is accessible
+if [ -f "/var/www/html/src/assets/images/features/hubbletelescope.png" ]; then
+    echo "Hubble telescope image exists"
+else
+    echo "Creating directory for Hubble telescope image"
+    mkdir -p /var/www/html/src/assets/images/features
+    if [ -f "/app/src/assets/images/features/hubbletelescope.png" ]; then
+        echo "Copying Hubble telescope image from build"
+        cp /app/src/assets/images/features/hubbletelescope.png /var/www/html/src/assets/images/features/
+    fi
+fi
+
 # Check if nginx config is valid
 nginx -t
 
