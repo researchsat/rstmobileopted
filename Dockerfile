@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --legacy-peer-deps
+RUN npm install --legacy-peer-deps --no-optional
 
 # Copy the rest of the application
 COPY . .
@@ -51,6 +51,7 @@ COPY --from=build /app/src/assets/images/background/checkedbg.svg /var/www/html/
 COPY --from=build /app/src/assets/images/benefits/mask-group0.svg /var/www/html/src/assets/images/benefits/
 COPY --from=build /app/src/assets/images/partnerships/diagonal-arrow1.svg /var/www/html/src/assets/images/partnerships/
 COPY --from=build /app/src/assets/images/partnerships/diagonal-arrow2.svg /var/www/html/src/assets/images/partnerships/
+COPY --from=build /app/src/assets/images/features/hubbletelescope.png /var/www/html/src/assets/images/features/
 
 # Copy other missing image files
 RUN mkdir -p /var/www/html/src/assets/images/partnerships /var/www/html/src/assets/images/features
