@@ -52,7 +52,15 @@ export const getResponsiveImageUrls = (src, options = {}) => {
 
   // If no extension is found, assume it's a jpg
   const extension = lastDotIndex > lastSlashIndex ? src.slice(lastDotIndex + 1) : 'jpg';
-  const basePath = lastDotIndex > lastSlashIndex ? src.slice(0, lastDotIndex) : src;
+  let basePath = lastDotIndex > lastSlashIndex ? src.slice(0, lastDotIndex) : src;
+
+  // Check if the filename already contains size indicators (e.g., "-320", "-640")
+  // If it does, strip them to get the base filename
+  const sizePattern = /\-\d+$/;
+  if (sizePattern.test(basePath)) {
+    // Remove the size indicator from the base path
+    basePath = basePath.replace(sizePattern, '');
+  }
 
   // Determine the fallback format (use original if it's jpg or png, otherwise use jpg)
   const fallbackFormat = ['jpg', 'jpeg', 'png'].includes(extension.toLowerCase()) ? extension : 'jpg';
