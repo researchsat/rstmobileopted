@@ -17,7 +17,9 @@
     "convert-images": "node scripts/convert-to-webp.js",
     "fix-source-maps": "node scripts/fix-source-maps.js",
     "prebuild": "npm run convert-images",
-    "postbuild": "node scripts/copy-assets.js"
+    "postbuild": "node scripts/copy-assets.js",
+    "deploy": "./deploy-unified.sh",
+    "deploy:password": "./deploy-unified.sh --password"
   },
   "keywords": [
     "researchsat",
