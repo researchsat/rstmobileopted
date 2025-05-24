@@ -2,6 +2,9 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+// Import responsive utilities
+@use 'responsive-utilities';
+
 // Import component styles
 @use 'general';
 @use 'navigation';

@@ -119,10 +119,12 @@
 }
 
 /* Media Queries */
+/* Large tablets and small desktops */
 @media (max-width: 1200px) {
   .sectionContainer {
     max-width: 100%;
     padding: 30px 20px;
+    gap: 30px;
   }
 
   .imageContainer {
@@ -133,6 +135,7 @@
 
   .contentContainer {
     width: 50%;
+    gap: 30px;
   }
 
   .sectionTitle {
@@ -144,12 +147,42 @@
   }
 }
 
+/* iPad landscape */
+@media (max-width: 1024px) {
+  .sectionContainer {
+    padding: 40px 30px;
+    gap: 40px;
+  }
+
+  .imageContainer {
+    width: 45%;
+  }
+
+  .contentContainer {
+    width: 55%;
+    gap: 25px;
+  }
+
+  .sectionTitle {
+    font-size: 26px;
+  }
+
+  .sectionDescription {
+    font-size: 19px;
+  }
+
+  .readMoreLink {
+    font-size: 15px;
+  }
+}
+
+/* Tablet portrait */
 @media (max-width: 768px) {
   .sectionContainer {
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    padding: 20px;
+    padding: 30px 20px;
   }
 
   .imageContainer {
@@ -162,29 +195,44 @@
   .contentContainer {
     width: 100%;
     gap: 20px;
+    text-align: center;
   }
 
   .headerContainer {
     max-width: 100%;
+    align-items: center;
   }
 
   .sectionTitle {
     font-size: 24px;
+    text-align: center;
   }
 
   .sectionDescription {
     font-size: 18px;
     max-width: 100%;
+    text-align: center;
+  }
+
+  .readMoreLink {
+    align-self: center;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile */
+@media (max-width: 576px) {
   .sectionContainer {
-    padding: 15px;
+    padding: 20px 15px;
+    gap: 25px;
+  }
+
+  .imageContainer {
+    max-width: 400px;
   }
 
   .sectionTitle {
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 1.3;
   }
 
   .sectionDate {
@@ -193,5 +241,38 @@
 
   .sectionDescription {
     font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .readMoreLink {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .sectionContainer {
+    padding: 15px 10px;
+    gap: 20px;
+  }
+
+  .imageContainer {
+    max-width: 350px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionDate {
+    font-size: 13px;
+  }
+
+  .sectionDescription {
+    font-size: 15px;
+  }
+
+  .contentContainer {
+    gap: 15px;
   }
 }

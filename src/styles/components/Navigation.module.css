@@ -371,6 +371,23 @@
   }
 }
 
+/* Tablet landscape and smaller */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 14px 20px;
+  }
+
+  .menuContainer {
+    width: calc(100% - 40px - 140px);
+    margin: 0 20px;
+  }
+
+  .logoImage {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 @media (max-width: 991px) {
   .nav {
     padding: 12px 15px;
@@ -401,6 +418,8 @@
     transform: none;
     border-radius: 8px;
     animation: mobileFadeIn 0.2s ease-in-out;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
   }
 
   @keyframes mobileFadeIn {
@@ -420,6 +439,42 @@
   .contactButton {
     width: auto;
     padding: 8px 16px;
+    min-height: 44px;
+  }
+}
+
+/* Mobile specific improvements */
+@media (max-width: 576px) {
+  .nav {
+    padding: 10px 12px;
+  }
+
+  .menuContainer {
+    width: calc(100% - 24px - 100px);
+    margin: 0 12px;
+    font-size: 14px;
+  }
+
+  .logoImage {
+    width: 20px;
+    height: 20px;
+  }
+
+  .dropdownMenu {
+    top: 60px;
+    left: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+    padding: 1rem;
+  }
+
+  .menuText {
+    font-size: 14px;
+  }
+
+  .contactButton {
+    padding: 10px 16px;
+    font-size: 14px;
   }
 }
 
