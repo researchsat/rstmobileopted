@@ -130,6 +130,8 @@ const FeaturesSection = () => {
             className={styles.featureImage}
           />
 
+        
+        </div>
           {/* Hardware Label */}
           <div className={styles.hardwareLabel}>
             <img src="/src/assets/images/features/bolt.svg" alt="" className={styles.boltIcon} />
@@ -144,7 +146,6 @@ const FeaturesSection = () => {
               ))}
             </div>
           </div>
-        </div>
       </div>
     </section>
   );

@@ -336,10 +336,6 @@
     padding-right: 20px;
   }
 
-  .featureSlider {
-    width: calc(100% - 40px);
-    margin: 0 20px 40px;
-  }
 
   .seeAllButton {
     left: 20px;
@@ -359,6 +355,8 @@
 }
 
 @media (max-width: 576px) {
+  /* Add 20px margin to the section */
+
   .featuresTitle {
     font-size: 28px;
   }
@@ -375,8 +373,18 @@
     width: calc(100% - 40px);
   }
 
+  /* Move hardware label below the feature image */
   .hardwareLabel {
-    width: 90%;
+    position: relative;
+    right: auto;
+    top: auto;
     font-size: 12px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Ensure image container has proper spacing */
+  .imageContainer {
+    margin-bottom: 0;
   }
 }

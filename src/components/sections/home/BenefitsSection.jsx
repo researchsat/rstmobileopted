@@ -69,34 +69,11 @@ const BenefitsSection = () => {
 
         {/* Background Elements */}
         <div className={styles.starsBackground}>
-          {/* Stars dots */}
-          <div className={styles.star1}></div>
-          <div className={styles.star2}></div>
-          <div className={styles.star3}></div>
-          <div className={styles.star4}></div>
-          <div className={styles.star5}></div>
-          <div className={styles.star6}></div>
-          <div className={styles.star7}></div>
-          <div className={styles.star8}></div>
-          <div className={styles.star9}></div>
-          <div className={styles.star10}></div>
+          <img src="/src/assets/images/benefits/starysky.svg" alt="Starry Sky" className={styles.starsBackgroundSvg} />
         </div>
 
         <div className={styles.solarSystem}>
-          {/* Solar system orbits */}
-          <div className={styles.orbit1}></div>
-          <div className={styles.orbit2}></div>
-          <div className={styles.orbit3}></div>
-          <div className={styles.orbit4}></div>
-          <div className={styles.orbit5}></div>
-          <div className={styles.orbit6}></div>
-          {/* Planets */}
-          <div className={styles.planet1}></div>
-          <div className={styles.planet2}></div>
-          <div className={styles.planet3}></div>
-          <div className={styles.planet4}></div>
-          <div className={styles.planet5}></div>
-          <div className={styles.planet6}></div>
+          <img src="/src/assets/images/benefits/solarsytem.svg" alt="Solar System" className={styles.solarSystemSvg} />
         </div>
 
         <div className={styles.waveBg}>

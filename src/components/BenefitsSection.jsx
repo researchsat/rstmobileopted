@@ -36,6 +36,9 @@ const BenefitsSection = () => {
         <div className={styles.bentoGrid}>
           {/* Card 1 */}
           <div className={styles.card1}>
+            <div className={styles.starsBackground}>
+              <img src="/src/assets/images/benefits/starysky.svg" alt="Starry Sky" className={styles.starsBackgroundSvg} />
+            </div>
             <div className={styles.cardContent}>
               <div className={styles.cardTitle}>
                 Impactful &amp; Intellectually Interesting Projects
@@ -48,6 +51,8 @@ const BenefitsSection = () => {
             {/* Card 2 */}
             <div className={styles.card2}>
               <img src="/src/assets/images/background/checkedbg.svg" alt="Checkered Background" className={styles.card2Bg} />
+              <div className={styles.cardTitle}>
+                Interdisciplinary Research</div>
             </div>
 
             {/* Card 3 */}
@@ -63,6 +68,9 @@ const BenefitsSection = () => {
           {/* Card 4 */}
           <div className={styles.card4}>
             <div className={styles.cardContent}>
+              <div className={styles.waveBg}>
+                <img src="/src/assets/images/benefits/solarsytem.svg" alt="Solar System" className={styles.solarSystemSvg} />
+              </div>
               <div className={styles.cardTitle}>
                 Represent your industry sector in Space Sector
               </div>
@@ -72,6 +80,9 @@ const BenefitsSection = () => {
           {/* Card 5 */}
           <div className={styles.card5}>
             <div className={styles.cardContent}>
+                <div className={styles.waveBg}>
+                  <img src="/src/assets/images/benefits/mask-group0.svg" alt="" className={styles.maskGroup} />
+                </div>
               <div className={styles.cardTitle}>
                 Conduct cutting-edge research
               </div>
@@ -79,46 +90,7 @@ const BenefitsSection = () => {
           </div>
         </div>
 
-        {/* Background Elements */}
-        <div className={styles.starsBackground}>
-          {/* Stars dots */}
-          <div className={styles.star1}></div>
-          <div className={styles.star2}></div>
-          <div className={styles.star3}></div>
-          <div className={styles.star4}></div>
-          <div className={styles.star5}></div>
-          <div className={styles.star6}></div>
-          <div className={styles.star7}></div>
-          <div className={styles.star8}></div>
-          <div className={styles.star9}></div>
-          <div className={styles.star10}></div>
-        </div>
-
-        <div className={styles.solarSystem}>
-          {/* Solar system orbits */}
-          <div className={styles.orbit1}></div>
-          <div className={styles.orbit2}></div>
-          <div className={styles.orbit3}></div>
-          <div className={styles.orbit4}></div>
-          <div className={styles.orbit5}></div>
-          <div className={styles.orbit6}></div>
-          {/* Planets */}
-          <div className={styles.planet1}></div>
-          <div className={styles.planet2}></div>
-          <div className={styles.planet3}></div>
-          <div className={styles.planet4}></div>
-          <div className={styles.planet5}></div>
-          <div className={styles.planet6}></div>
-        </div>
-
-        <div className={styles.waveBg}>
-          <img src="/src/assets/images/benefits/mask-group0.svg" alt="" className={styles.maskGroup} />
-        </div>
-
-
-
-        {/* Interdisciplinary Research Text */}
-        <div className={styles.interdisciplinaryResearch}>Interdisciplinary Research</div>
+        
       </div>
 
       {/* YouTube Video Modal */}

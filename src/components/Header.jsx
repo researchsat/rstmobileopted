@@ -44,14 +44,14 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Bottom Left Content - Satellites for life sciences */}
+        {/* Bottom Left Content - Merged structure for easier handling */}
         <div className={styles.bottomContent}>
-          <div className={styles.glowEffect}></div>
-          <div className={styles.satellitesText}>
+          <div className={styles.mainText}>
             <span>Satellites</span>
             <span>for</span>
+            <br />
+            <span>life sciences</span>
           </div>
-          <div className={styles.lifeSciencesText}>life sciences</div>
         </div>
       </BackgroundImage>
 

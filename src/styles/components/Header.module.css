@@ -80,16 +80,28 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Bottom Content */
+/* Mobile Text Container - Hidden by default */
+.mobileTextContainer {
+  display: none;
+}
+
+/* Bottom Content - Merged for easier handling */
 .bottomContent {
   position: absolute;
   left: 80px;
-  bottom: 80px;
+  top: 50vh;
   z-index: 10;
-  margin-top: 540px;
+  color: #ffffff;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 64px;
+  line-height: 95%;
+  letter-spacing: -0.5px;
+  font-weight: 400;
 }
 
-.glowEffect {
+/* Glow effect using pseudo-element for cleaner structure */
+.bottomContent::before {
+  content: '';
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.8) 0%,
@@ -101,30 +113,18 @@
   left: -13px;
   bottom: 150px;
   filter: blur(125px);
+  z-index: -1;
 }
 
-.satellitesText {
-  color: #ffffff;
-  font-family: 'Exo 2', sans-serif;
-  font-size: 64px;
-  line-height: 95%;
-  letter-spacing: -0.5px;
-  font-weight: 400;
-  margin-bottom: 13px;
-}
-
-.satellitesText span {
+/* Unified text styling - all text in one container */
+.bottomContent .mainText span {
   display: inline-block;
   margin-right: 10px;
 }
 
-.lifeSciencesText {
-  color: #ffffff;
-  font-family: 'Exo 2', sans-serif;
-  font-size: 64px;
-  line-height: 95%;
-  letter-spacing: -0.5px;
-  font-weight: 400;
+/* Remove margin from the last span on each line */
+.bottomContent .mainText span:last-child {
+  margin-right: 0;
 }
 
 /* Media Queries */
@@ -133,48 +133,8 @@
     height: 800px;
   }
 
-  .satellitesText, .lifeSciencesText {
-    font-size: 56px;
-  }
-}
-
-/* iPad and tablet landscape */
-@media (max-width: 1024px) {
-  .header {
-    height: 750px;
-  }
-
-  .rightContent {
-    right: 60px;
-    top: 140px;
-  }
-
-  .brandText {
-    width: 200px;
-  }
-
-  .brandName, .tagline {
-    font-size: 15px;
-  }
-
   .bottomContent {
-    left: 60px;
-    bottom: 80px;
-  }
-
-  .satellitesText, .lifeSciencesText {
-    font-size: 52px;
-  }
-
-  .glowEffect {
-    width: 320px;
-    height: 65px;
-    bottom: 140px;
-  }
-
-  .exploreButton {
-    padding: 14px 28px;
-    font-size: 15px;
+    font-size: 56px;
   }
 }
 
@@ -190,14 +150,11 @@
 
   .bottomContent {
     left: 40px;
-    bottom: 60px;
-  }
-
-  .satellitesText, .lifeSciencesText {
+    bottom: 10vh;
     font-size: 48px;
   }
 
-  .glowEffect {
+  .bottomContent::before {
     width: 300px;
     height: 60px;
     bottom: 120px;
@@ -216,14 +173,11 @@
 
   .bottomContent {
     left: 20px;
-    bottom: 40px;
-  }
-
-  .satellitesText, .lifeSciencesText {
+    bottom: 10vh;
     font-size: 40px;
   }
 
-  .glowEffect {
+  .bottomContent::before {
     width: 250px;
     height: 50px;
     bottom: 100px;
@@ -235,94 +189,116 @@
   }
 }
 
-/* Small mobile devices */
 @media (max-width: 576px) {
   .header {
-    height: 500px;
-    min-height: 500px;
+    height: 75vh;
   }
 
-  .rightContent {
-    right: 15px;
-    top: 80px;
-    width: 160px;
+  /* Mobile container for all text content */
+  .mobileTextContainer {
+    display: flex;
+    width: 343px;
+    height: 467px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
   }
 
-  .brandText {
-    width: 160px;
-    margin-bottom: 20px;
-  }
-
-  .brandName, .tagline {
-    font-size: 14px;
-    line-height: 1.3;
-  }
-
+  /* Mobile positioning for bottomContent */
   .bottomContent {
-    left: 15px;
-    bottom: 30px;
-  }
-
-  .satellitesText, .lifeSciencesText {
+    display: block;
+    position: absolute;
+    left: 10vw;
+    bottom: auto;
     font-size: 32px;
-    line-height: 1.1;
+    top: -10vh;
   }
 
-  .glowEffect {
+  /* Mobile positioning for rightContent */
+  .rightContent {
+    position: absolute;
+    right: 10vw;
+    top: 50vh;
+    width: auto;
+  }
+
+  /* Mobile glow effect positioning */
+  .bottomContent::before {
     width: 200px;
     height: 40px;
     bottom: 80px;
   }
 
-  .exploreButton {
+  /* Mobile text sizing for repositioned elements */
+  .bottomContent .mainText span {
+    font-size: 42px;
+  }
+
+  .rightContent .brandText {
+    width: 160px;
+  }
+
+  .rightContent .brandName,
+  .rightContent .tagline {
+    font-size: 14px;
+  }
+
+  .rightContent .exploreButton {
     padding: 10px 20px;
     font-size: 12px;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-/* Extra small mobile devices */
-@media (max-width: 375px) {
-  .header {
-    height: 450px;
-    min-height: 450px;
+    width: auto;
   }
 
-  .rightContent {
-    right: 10px;
-    top: 70px;
-    width: 140px;
+  /* Mobile-specific styles for text elements */
+  .mobileMainHeading {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 8px;
   }
 
-  .brandText {
-    width: 140px;
-    margin-bottom: 15px;
+  .mobileDescription {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 32px;
   }
 
-  .brandName, .tagline {
-    font-size: 12px;
+  .mobileBrandName {
+    color: #ff3241;
+    font-weight: 500;
   }
 
-  .bottomContent {
-    left: 10px;
-    bottom: 25px;
+  .mobileExploreButton {
+    border-radius: 24px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    padding: 16px 32px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
   }
 
-  .satellitesText, .lifeSciencesText {
-    font-size: 28px;
-  }
-
-  .glowEffect {
-    width: 180px;
-    height: 35px;
-    bottom: 70px;
-  }
-
-  .exploreButton {
-    padding: 8px 16px;
-    font-size: 11px;
+  .mobileExploreButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
   }
 }

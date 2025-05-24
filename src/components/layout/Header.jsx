@@ -16,6 +16,20 @@ const Header = () => {
         overlay={true}
         overlayOpacity={0.3}
       >
+        {/* Mobile Layout - Only visible on mobile screens */}
+        <div className={styles.mobileTextContainer}>
+          <div className={styles.mobileMainHeading}>
+            Satellites for<br />life sciences
+          </div>
+
+          <div className={styles.mobileDescription}>
+            <span className={styles.mobileBrandName}>ResearchSat</span> empowers your space biology research with seamless, end-to-end solutions
+          </div>
+
+          <Link to="/payloads" className={styles.mobileExploreButton}>
+            Explore Payloads
+          </Link>
+        </div>
 
         {/* Right Side Content - ResearchSat Text and Button */}
         <div className={styles.rightContent}>
@@ -33,14 +47,14 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Bottom Left Content - Satellites for life sciences */}
+        {/* Bottom Left Content - Merged structure for easier handling */}
         <div className={styles.bottomContent}>
-          <div className={styles.glowEffect}></div>
-          <div className={styles.satellitesText}>
+          <div className={styles.mainText}>
             <span>Satellites</span>
             <span>for</span>
+            <br />
+            <span>life sciences</span>
           </div>
-          <div className={styles.lifeSciencesText}>life sciences</div>
         </div>
       </BackgroundImage>
     </header>

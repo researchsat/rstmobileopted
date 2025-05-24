@@ -16,60 +16,6 @@
     @media (max-width: $breakpoint-lg) {
       @content;
     }
-  } @else if $breakpoint == xl {
-    @media (max-width: $breakpoint-xl) {
-      @content;
-    }
-  }
-}
-
-// Additional responsive mixins for specific device targeting
-@mixin mobile-small {
-  @media (max-width: $mobile-small) {
-    @content;
-  }
-}
-
-@mixin mobile-medium {
-  @media (max-width: $mobile-medium) {
-    @content;
-  }
-}
-
-@mixin mobile-large {
-  @media (max-width: $mobile-large) {
-    @content;
-  }
-}
-
-@mixin tablet-portrait {
-  @media (max-width: $tablet-portrait) {
-    @content;
-  }
-}
-
-@mixin tablet-landscape {
-  @media (max-width: $tablet-landscape) {
-    @content;
-  }
-}
-
-// Range-based responsive mixins
-@mixin mobile-only {
-  @media (max-width: #{$breakpoint-sm - 1px}) {
-    @content;
-  }
-}
-
-@mixin tablet-only {
-  @media (min-width: $breakpoint-sm) and (max-width: #{$breakpoint-md - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop-only {
-  @media (min-width: $breakpoint-md) {
-    @content;
   }
 }
 
@@ -92,7 +38,7 @@
   background-color: $bg-color;
   color: $text-color;
   @include transition;
-
+  
   &:hover {
     background-color: $hover-bg-color;
     color: $hover-text-color;

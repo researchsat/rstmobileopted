@@ -196,26 +196,6 @@
 }
 
 /* Media Queries */
-/* Tablet landscape */
-@media (max-width: 1024px) {
-  .footer {
-    padding: 2rem 0 1rem;
-  }
-
-  .footerContent {
-    gap: 1rem;
-  }
-
-  .footerColumn {
-    min-width: 160px;
-    margin-bottom: 1.5rem;
-  }
-
-  .footerLogo {
-    max-width: 130px;
-  }
-}
-
 @media (max-width: 991px) {
   .footerColumn {
     min-width: 150px;
@@ -224,18 +204,9 @@
   .footerLogo {
     max-width: 120px;
   }
-
-  .footerContent {
-    justify-content: space-around;
-  }
 }
 
-/* Tablet portrait */
-@media (max-width: 768px) {
-  .footer {
-    padding: 1.5rem 0 1rem;
-  }
-
+@media (max-width: 767px) {
   .footerTop {
     justify-content: center;
     margin-bottom: 2rem;
@@ -243,18 +214,14 @@
 
   .footerLogo {
     margin-right: 0;
-    max-width: 110px;
   }
 
   .footerContent {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   .footerColumn {
     width: 100%;
-    max-width: 300px;
     margin-bottom: 2rem;
     padding-right: 0;
   }
@@ -268,7 +235,6 @@
 
   .footerCopyright {
     margin-bottom: 1.5rem;
-    font-size: 0.85rem;
   }
 
   .socialContainer {
@@ -285,53 +251,22 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
+  /* Add 10vw margin for mobile */
   .footer {
-    padding: 1rem 0 0.5rem;
+    margin: 10vw;
   }
 
+  /* Ensure logo is centered on mobile */
   .footerTop {
-    margin-bottom: 1.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
 
   .footerLogo {
-    max-width: 100px;
-  }
-
-  .footerColumn {
-    margin-bottom: 1.5rem;
-  }
-
-  .footerTitle {
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .footerText, .footerLink, .footerContact {
-    font-size: 0.85rem;
-  }
-
-  .newsletterForm {
-    gap: 0.75rem;
-  }
-
-  .newsletterInput {
-    font-size: 14px;
-    padding: 10px 12px;
-  }
-
-  .newsletterButton {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  .socialIcon {
-    width: 35px;
-    height: 35px;
-  }
-
-  .footerCopyright {
-    font-size: 0.8rem;
+    margin-right: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

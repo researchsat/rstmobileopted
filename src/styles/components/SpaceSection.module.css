@@ -250,6 +250,11 @@
     font-size: 12px;
   }
 
+  /* Remove top positioning for mobile */
+  .rightContent {
+    top: 250px;
+  }
+
   .logoItem {
     margin-right: 10px;
     height: 40px;
