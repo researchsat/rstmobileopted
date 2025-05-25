@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import viteImagemin from 'vite-plugin-imagemin';
 
 export default defineConfig({
+  base: './', // Use relative paths for assets
   plugins: [
     react(),
     viteImagemin({

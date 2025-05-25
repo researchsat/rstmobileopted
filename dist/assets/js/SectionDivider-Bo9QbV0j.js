@@ -1,1 +1,0 @@
-import{j as i}from"./main-BS0TyEYB.js";import"./vendor-react-B0A4F5O-.js";const s="_dividerContainer_ohbbp_1",a="_dividerImage_ohbbp_8",e=()=>i.jsx("div",{className:s,children:i.jsx("div",{className:a})});export{e as S};
