@@ -1,0 +1,955 @@
+/* FeaturesPage.module.css */
+.featuresPage {
+  position: relative;
+}
+
+.heroSection {
+  position: relative;
+  height: 780px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  margin-bottom: 90px;
+}
+
+.heroBackground {
+  width: 100%;
+  height: 522px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  opacity: 0.9;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.gradientOverlay {
+  background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  width: 100vw;
+  height: 85px;
+  position: absolute;
+  left: 0;
+  top: 485px;
+  filter: blur(20px);
+  flex-shrink: 0;
+}
+
+.contentContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  left: 80px;
+  top: 239px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.featuresLabel {
+  color: var(--secondary-color, #ff3241);
+  text-align: left;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.heroTitle {
+  color: #ffffff;
+  text-align: left;
+  font-size: 58px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  width: 959px;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1280px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 602px;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  align-self: stretch;
+}
+
+.descriptionText {
+  color: #ffffff;
+  text-align: right;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Introduction Section */
+.introSection {
+  background: #121212;
+  padding: 80px 0 10px 0;
+}
+
+.introContent {
+  text-align: center;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.introCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.introCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+.introCardTitle {
+  color: #87C2AA;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 16px 0;
+}
+
+.introCardDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+
+/* Timeline Section */
+.timelineSection {
+  background: #121212;
+  padding: 20px 0 40px 0;
+}
+
+/* Mission Framework Section */
+.missionFrameworkSection {
+  background: #191a1d;
+  padding: 120px 0;
+}
+
+.sectionContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0;
+  background: linear-gradient(180deg, #BBDED0 0%, #87C2AA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.stepCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stepCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stepImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.stepCard:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.stepContent {
+  padding: 30px;
+}
+
+.stepNumber {
+  background: linear-gradient(180deg, #BBDED0 0%, #87C2AA 100%);
+  color: #1a1a1a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.stepTitle {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 16px 0;
+}
+
+.stepDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+.featureTitle {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 16px 0;
+}
+
+.featureDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0 0 24px 0;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureList li {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.featureList li::before {
+  content: '•';
+  color: #87C2AA;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.missionTypes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.missionType {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.missionName {
+  color: #87C2AA;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 8px 0;
+}
+
+.missionDuration {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 0;
+}
+
+/* Why Choose ResearchSat Section */
+.whyChooseSection {
+  background: #121212;
+  padding: 120px 0;
+}
+
+.sectionDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+/* New 2-column layout for Why Choose section */
+.whyChooseLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  min-height: 600px;
+}
+
+.whyChooseImageColumn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.whyChooseImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.whyChooseImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.whyChooseContentColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
+  padding: 40px 0;
+}
+
+.whyChooseHeader {
+  margin-bottom: 20px;
+}
+
+.whyChooseTitle {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0;
+}
+
+.statsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statNumber {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 100%;
+  margin: 0;
+}
+
+.statLabel {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0;
+}
+
+.statDescription {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+  max-width: 400px;
+}
+
+.whyChooseFooter {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.whyChooseTagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+}
+
+.whyChooseTagline strong {
+  color: #87C2AA;
+  font-weight: 600;
+}
+
+/* Keep original benefitsGrid for fallback/other uses */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.benefitCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.benefitCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+.benefitIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.benefitTitle {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 16px 0;
+}
+
+.benefitDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Ready to Launch Section */
+.readyToLaunchSection {
+  background: #191a1d;
+  padding: 120px 0;
+}
+
+.readyToLaunchContent {
+  text-align: center;
+}
+
+.readyToLaunchDescription {
+  color: #87C2AA;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  margin: 0 0 30px 0;
+}
+
+.readyToLaunchText {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.primaryButton {
+  background: linear-gradient(180deg, #BBDED0 0%, #87C2AA 100%);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(187, 222, 208, 0.3);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.secondaryButton:hover {
+  background-color: #17242d;
+}
+
+.taglineSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 40px;
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Collaboration Section */
+.collaborationSection {
+  background: #121212;
+  padding: 120px 0;
+}
+
+.collaborationContent {
+  text-align: center;
+}
+
+.collaborationDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.contactItem {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.contactItem strong {
+  color: #ff3241;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contactItem a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactItem a:hover {
+  color: #87C2AA;
+}
+
+.ctaSection {
+  text-align: center;
+}
+
+.ctaText {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+  margin: 0 0 40px 0;
+  font-style: italic;
+}
+
+.scheduleButton {
+  background: linear-gradient(180deg, #BBDED0 0%, #87C2AA 100%);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.scheduleButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(187, 222, 208, 0.3);
+}
+
+.footerMargin {
+  margin-bottom: 60px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 48px;
+    width: 800px;
+  }
+
+  .contentContainer {
+    padding: 0 40px;
+  }
+
+  .heroContent {
+    left: 40px;
+  }
+
+  .stepsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .introGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .whyChooseLayout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    min-height: auto;
+  }
+
+  .whyChooseImage {
+    min-height: 400px;
+  }
+
+  .whyChooseTitle {
+    font-size: 40px;
+  }
+
+  .statNumber {
+    font-size: 56px;
+  }
+
+  .statLabel {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .heroSection {
+    height: auto;
+    padding-bottom: 400px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .bottomContainer {
+    position: relative;
+    top: auto;
+    margin-top: 350px;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .introGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .whyChooseLayout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .whyChooseImage {
+    min-height: 350px;
+  }
+
+  .whyChooseTitle {
+    font-size: 36px;
+  }
+
+  .statNumber {
+    font-size: 48px;
+  }
+
+  .statLabel {
+    font-size: 16px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .descriptionText {
+    font-size: 18px;
+  }
+
+  .contentContainer {
+    padding: 0 20px;
+  }
+
+  .heroContent {
+    left: 20px;
+  }
+
+  .sectionContainer {
+    padding: 0 20px;
+  }
+
+  .introSection,
+  .timelineSection,
+  .missionFrameworkSection,
+  .whyChooseSection,
+  .readyToLaunchSection,
+  .collaborationSection {
+    padding: 80px 0;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .stepCard .stepContent,
+  .introCard,
+  .benefitCard {
+    padding: 30px;
+  }
+
+  .stepsGrid,
+  .introGrid {
+    gap: 30px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .whyChooseTitle {
+    font-size: 32px;
+  }
+
+  .statNumber {
+    font-size: 40px;
+  }
+
+  .statLabel {
+    font-size: 16px;
+  }
+
+  .statDescription {
+    font-size: 14px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .descriptionText {
+    font-size: 16px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .stepCard .stepContent,
+  .introCard,
+  .benefitCard {
+    padding: 20px;
+  }
+
+  .whyChooseTitle {
+    font-size: 28px;
+  }
+
+  .statNumber {
+    font-size: 36px;
+  }
+
+  .statLabel {
+    font-size: 14px;
+  }
+
+  .statDescription {
+    font-size: 13px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}

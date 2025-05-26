@@ -1,0 +1,384 @@
+/* PastMissionsPage.module.css */
+
+.pastMissionsPage {
+  background-color: #001718;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.gradientOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #001718 0%, rgba(0, 23, 24, 0.8) 50%, transparent 100%);
+  z-index: 2;
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.pastMissionsLabel {
+  color: #bcd8d5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heroTitle {
+  color: #fffef6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 110%;
+  margin: 0;
+}
+
+.bottomContainer {
+  position: relative;
+  z-index: 3;
+  padding: 0 60px 60px;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.descriptionContainer {
+  max-width: 600px;
+}
+
+.descriptionText {
+  color: #fffef6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 160%;
+  margin: 0;
+}
+
+/* Second Section */
+.secondSection {
+  background-color: #121212;
+  padding: 60px 0;
+}
+
+.sectionContainer {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.sectionTitle {
+  color: #fffef6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.grayText {
+  color: #fffef6;
+}
+
+.redText {
+  color: #ff3241;
+}
+
+.lightText {
+  color: #bcd8d5;
+}
+
+/* Mission Types Wrapper */
+.missionTypesWrapper {
+  background-color: #001718;
+  padding: 60px 0 0 0;
+}
+
+.missionTypesHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 60px;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trustWallLabel {
+  color: #bcd8d5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Mission Sections */
+.missionSection {
+  background-color: #001718;
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(188, 216, 213, 0.1);
+}
+
+.missionContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: stretch;
+  min-height: 500px;
+}
+
+.missionImageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  height: 100%;
+  min-height: 500px;
+}
+
+.missionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.missionSection:hover .missionImage {
+  transform: scale(1.05);
+}
+
+.missionTextContent {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.missionTitle {
+  color: #bcd8d5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 16px 0;
+}
+
+.missionSubtitle {
+  color: #107e7d;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 0 0 24px 0;
+  font-style: italic;
+}
+
+.missionDescription {
+  color: #fffef6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 160%;
+  margin: 0 0 32px 0;
+}
+
+.missionHighlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.highlightLabel {
+  color: #107e7d;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.highlightValue {
+  color: #fffef6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: rgba(16, 126, 125, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.learnMoreButton {
+  background: transparent;
+  border: 2px solid #107e7d;
+  color: #107e7d;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.learnMoreButton:hover {
+  background: #107e7d;
+  color: #fffef6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 126, 125, 0.3);
+}
+
+/* Alternating Layout */
+.missionSection:nth-child(even) .missionContent {
+  grid-template-columns: 1fr 1fr;
+}
+
+.missionSection:nth-child(even) .missionImageContainer {
+  order: 2;
+}
+
+.missionSection:nth-child(even) .missionTextContent {
+  order: 1;
+}
+
+/* Footer Margin */
+.footerMargin {
+  height: 60px;
+  background-color: #001718;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contentContainer,
+  .bottomContainer,
+  .sectionContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .missionContent {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 991px) {
+  .heroTitle {
+    font-size: 48px;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+  }
+  
+  .missionContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .missionSection:nth-child(even) .missionImageContainer {
+    order: 1;
+  }
+  
+  .missionSection:nth-child(even) .missionTextContent {
+    order: 2;
+  }
+  
+  .missionImage {
+    height: 300px;
+  }
+  
+  .missionTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentContainer,
+  .bottomContainer,
+  .sectionContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .heroSection {
+    height: 600px;
+    margin-bottom: 40px;
+  }
+  
+  .heroTitle {
+    font-size: 36px;
+  }
+  
+  .missionSection {
+    padding: 40px 0;
+  }
+  
+  .missionTitle {
+    font-size: 24px;
+  }
+  
+  .missionHighlights {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+  
+  .missionImage {
+    height: 250px;
+  }
+}

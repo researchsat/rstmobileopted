@@ -17,8 +17,10 @@ import useAppStore from './store/appStore';
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
+const FeaturesPage = lazy(() => import('./pages/FeaturesPage'));
 const PayloadsPage = lazy(() => import('./pages/PayloadsPage'));
 const MissionsPage = lazy(() => import('./pages/MissionsPage'));
+const PastMissionsPage = lazy(() => import('./pages/PastMissionsPage'));
 const CareersPage = lazy(() => import('./pages/CareersPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const PartnershipsPage = lazy(() => import('./pages/PartnershipsPage'));
@@ -49,8 +51,10 @@ const AppRoutes = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/features" element={<FeaturesPage />} />
           <Route path="/payloads" element={<PayloadsPage />} />
           <Route path="/missions" element={<MissionsPage />} />
+          <Route path="/past-missions" element={<PastMissionsPage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/partnerships" element={<PartnershipsPage />} />

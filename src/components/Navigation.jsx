@@ -110,6 +110,10 @@ const Navigation = () => {
                       <img src={aboutIcon} alt="About" width="16" height="16" />
                       About
                     </Link>
+                    <Link to="/features" onClick={() => setIsMenuOpen(false)}>
+                      <img src={servicesIcon} alt="Features" width="16" height="16" />
+                      Features
+                    </Link>
                   </div>
 
                   {/* Column 2 */}
@@ -168,6 +172,9 @@ const Navigation = () => {
             </li>
             <li>
               <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/features">Features</Link>
             </li>
             <li>
               <Link to="/missions">Mission</Link>

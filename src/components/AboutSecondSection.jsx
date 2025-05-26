@@ -1,9 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import styles from '../styles/components/AboutSecondSection.module.css';
 import boltIcon from '../assets/images/about/bolt.svg';
+import FounderStoryLightbox from './FounderStoryLightbox';
 
 const AboutSecondSection = () => {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
+  const openLightbox = (e) => {
+    e.preventDefault();
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+  };
+
   return (
     <section className={styles.sectionContainer}>
       <div className={styles.contentWrapper}>
@@ -17,14 +28,19 @@ const AboutSecondSection = () => {
                 steadily moving closer to their vision of a healthier global
                 community.
               </p>
-              <Link to="/about" className={styles.button}>
+              <button onClick={openLightbox} className={styles.button}>
                 <img src={boltIcon} alt="Bolt icon" className={styles.boltIcon} />
                 <span className={styles.buttonText}>Our story</span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      <FounderStoryLightbox
+        isOpen={isLightboxOpen}
+        onClose={closeLightbox}
+      />
     </section>
   );
 };

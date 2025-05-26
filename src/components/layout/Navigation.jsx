@@ -99,6 +99,10 @@ const Navigation = () => {
                       <img src={missionIcon} alt="Mission" width="16" height="16" />
                       Mission
                     </Link>
+                    <Link to="/past-missions" onClick={() => setIsMenuOpen(false)}>
+                      <img src={missionIcon} alt="Past Missions" width="16" height="16" />
+                      Past Missions
+                    </Link>
                     <Link to="/payloads" onClick={() => setIsMenuOpen(false)}>
                       <img src={payloadsIcon} alt="Payloads" width="16" height="16" />
                       Payloads
@@ -152,6 +156,9 @@ const Navigation = () => {
             </li>
             <li>
               <Link to="/missions">Mission</Link>
+            </li>
+            <li>
+              <Link to="/past-missions">Past Missions</Link>
             </li>
             <li>
               <Link to="/payloads">Payloads</Link>

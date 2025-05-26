@@ -75,6 +75,7 @@
 .button {
   border-radius: 8px;
   border: 1px solid #ffffff;
+  background: transparent;
   padding: 16px 32px;
   display: flex;
   flex-direction: row;
@@ -90,7 +91,7 @@
 }
 
 .button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #17242d;
 }
 
 .boltIcon {
@@ -115,7 +116,7 @@
   .contentWrapper, .contentRow {
     width: 100%;
   }
-  
+
   .descriptionText {
     width: 100%;
     font-size: 28px;
@@ -126,11 +127,11 @@
   .sectionContainer {
     padding: 60px 20px;
   }
-  
+
   .descriptionText {
     font-size: 24px;
   }
-  
+
   .button {
     width: 100%;
   }

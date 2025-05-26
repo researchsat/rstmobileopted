@@ -9,7 +9,7 @@ const MissionsSecondSection = () => {
         <h2 className={styles.sectionTitle}>
           Medical Research with Our Space Missions
         </h2>
-        
+
         <div className={styles.contentContainer}>
           <div className={styles.descriptionText}>
             <span className={styles.grayText}>
@@ -22,9 +22,9 @@ const MissionsSecondSection = () => {
               Schedule a call now—we know you've got a packed schedule!
             </span>
           </div>
-          
-          <Link to="/contact" className={styles.contactButton}>
-            <span className={styles.buttonText}>Contact</span>
+
+          <Link to="/past-missions" className={styles.contactButton}>
+            <span className={styles.buttonText}>Past Missions</span>
           </Link>
         </div>
       </div>

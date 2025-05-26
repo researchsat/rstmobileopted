@@ -58,7 +58,7 @@ const Footer = () => {
           {/* Column 4: More Links */}
           <div className={styles.footerColumn}>
             <Link to="/payloads" className={styles.footerLink}>Payloads</Link>
-            <Link to="/careers" className={styles.footerLink}>Careers</Link>
+            <Link to="/past-missions" className={styles.footerLink}>Past Missions</Link>
             <Link to="/copyright" className={styles.footerLink}>Copyright</Link>
             <Link to="/cookies-policy" className={styles.footerLink}>Cookies Policy</Link>
           </div>

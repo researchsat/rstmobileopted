@@ -1,0 +1,62 @@
+<svg width="996" height="545" viewBox="0 0 996 545" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_2)">
+<rect width="996" height="545" fill="#F8F9FA"/>
+<circle cx="72" cy="72" r="72" fill="#E9ECEF"/>
+<rect x="240" y="125" width="756" height="420" fill="#DEE2E6"/>
+<rect x="240" y="125" width="756" height="100" fill="#ADB5BD"/>
+<circle cx="590" cy="205" r="80" fill="#6C757D"/>
+<rect x="720" y="125" width="276" height="100" fill="#495057"/>
+<path d="M720 125L996 225V125H720Z" fill="#343A40"/>
+<circle cx="150" cy="350" r="50" fill="#FD7E14"/>
+<circle cx="150" cy="350" r="30" fill="#FFFFFF"/>
+<rect x="400" y="250" width="200" height="150" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<rect x="420" y="270" width="160" height="20" fill="#E9ECEF"/>
+<rect x="420" y="300" width="120" height="20" fill="#E9ECEF"/>
+<rect x="420" y="330" width="140" height="20" fill="#E9ECEF"/>
+<rect x="420" y="360" width="100" height="20" fill="#E9ECEF"/>
+<circle cx="850" cy="350" r="30" fill="#20C997"/>
+<circle cx="850" cy="350" r="15" fill="#FFFFFF"/>
+<rect x="750" y="300" width="200" height="100" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<path d="M770 320L780 330L800 310" stroke="#28A745" stroke-width="3" fill="none"/>
+<rect x="50" y="450" width="150" height="80" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<circle cx="125" cy="490" r="20" fill="#007BFF"/>
+<rect x="300" y="450" width="150" height="80" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<circle cx="375" cy="490" r="20" fill="#6F42C1"/>
+<rect x="550" y="450" width="150" height="80" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<circle cx="625" cy="490" r="20" fill="#E83E8C"/>
+<rect x="800" y="450" width="150" height="80" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<circle cx="875" cy="490" r="20" fill="#FFC107"/>
+<path d="M200 350L300 450" stroke="#6C757D" stroke-width="2" stroke-dasharray="5,5"/>
+<path d="M600 400L550 450" stroke="#6C757D" stroke-width="2" stroke-dasharray="5,5"/>
+<path d="M850 380L850 450" stroke="#6C757D" stroke-width="2" stroke-dasharray="5,5"/>
+<rect x="50" y="50" width="100" height="60" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<circle cx="100" cy="80" r="15" fill="#FD7E14"/>
+<rect x="200" y="30" width="80" height="40" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<rect x="210" y="40" width="60" height="5" fill="#E9ECEF"/>
+<rect x="210" y="50" width="40" height="5" fill="#E9ECEF"/>
+<rect x="210" y="60" width="50" height="5" fill="#E9ECEF"/>
+<path d="M720 150L750 120L780 150L810 120L840 150" stroke="#FD7E14" stroke-width="3" fill="none"/>
+<circle cx="960" cy="80" r="20" fill="#FD7E14"/>
+<circle cx="960" cy="80" r="10" fill="#FFFFFF"/>
+<rect x="850" y="50" width="80" height="60" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<rect x="860" y="60" width="60" height="8" fill="#E9ECEF"/>
+<rect x="860" y="75" width="40" height="8" fill="#E9ECEF"/>
+<rect x="860" y="90" width="50" height="8" fill="#E9ECEF"/>
+<circle cx="50" cy="250" r="25" fill="#007BFF"/>
+<circle cx="50" cy="250" r="12" fill="#FFFFFF"/>
+<path d="M75 250L200 350" stroke="#007BFF" stroke-width="2" stroke-dasharray="3,3"/>
+<rect x="400" y="50" width="120" height="80" fill="#FFFFFF" stroke="#DEE2E6" stroke-width="2"/>
+<rect x="410" y="60" width="100" height="10" fill="#E9ECEF"/>
+<rect x="410" y="80" width="80" height="10" fill="#E9ECEF"/>
+<rect x="410" y="100" width="90" height="10" fill="#E9ECEF"/>
+<rect x="410" y="120" width="70" height="10" fill="#E9ECEF"/>
+<circle cx="580" cy="90" r="20" fill="#28A745"/>
+<circle cx="580" cy="90" r="10" fill="#FFFFFF"/>
+<path d="M600 90L720 150" stroke="#28A745" stroke-width="2" stroke-dasharray="3,3"/>
+</g>
+<defs>
+<clipPath id="clip0_1_2">
+<rect width="996" height="545" fill="white"/>
+</clipPath>
+</defs>
+</svg>
