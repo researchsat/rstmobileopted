@@ -29,6 +29,7 @@ const NewsArticlePage = lazy(() => import('./pages/NewsArticlePage'));
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsConditionsPage = lazy(() => import('./pages/TermsConditionsPage'));
 const EmailSignPage = lazy(() => import('./pages/EmailSignPage'));
+const TestPage = lazy(() => import('./pages/TestPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 // Route tracker component to track page views
@@ -63,6 +64,7 @@ const AppRoutes = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-conditions" element={<TermsConditionsPage />} />
           <Route path="/emailSign" element={<EmailSignPage />} />
+          <Route path="/test" element={<TestPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
