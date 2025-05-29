@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Space Mission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Tailwind gray-900 */
+            color: #E5E7EB; /* Tailwind gray-200 */
+        }
+        .form-select, .form-input, .form-textarea {
+            background-color: #374151; /* Tailwind gray-700 */
+            border-color: #4B5563; /* Tailwind gray-600 */
+            color: #E5E7EB; /* Tailwind gray-200 */
+        }
+        .form-select:focus, .form-input:focus, .form-textarea:focus {
+            border-color: #3B82F6; /* Tailwind blue-500 */
+            ring-color: #3B82F6;
+        }
+        .btn-primary {
+            background-color: #10B981; /* Tailwind emerald-500 */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #059669; /* Tailwind emerald-600 */
+        }
+        .btn-secondary {
+            background-color: #3B82F6; /* Tailwind blue-500 */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #2563EB; /* Tailwind blue-600 */
+        }
+        .card {
+            background-color: #1F2937; /* Tailwind gray-800 */
+            border: 1px solid #374151; /* Tailwind gray-700 */
+        }
+        /* Custom scrollbar for better aesthetics in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1F2937; /* Tailwind gray-800 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4B5563; /* Tailwind gray-600 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6B7280; /* Tailwind gray-500 */
+        }
+        /* Message Box Styles */
+        .message-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+        .message-box-success {
+            background-color: #10B981; /* emerald-500 */
+            color: white;
+        }
+        .message-box-error {
+            background-color: #EF4444; /* red-500 */
+            color: white;
+        }
+        .loader {
+            border: 4px solid #f3f3f3; /* Light grey */
+            border-top: 4px solid #3B82F6; /* Blue */
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-left: 8px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
+
+    <div id="customMessageBox" class="message-box"></div>
+
+    <div class="w-full max-w-3xl mx-auto">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-emerald-400">Launch Your Research to New Heights</h1>
+            <p class="text-lg text-gray-300 mt-2">Select your payload and mission to begin your space biology journey.</p>
+        </header>
+
+        <form id="bookingForm" class="space-y-8">
+            <section class="card p-6 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-semibold text-emerald-300 mb-4">1. Choose Your Satellite Payload</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="payloadType" class="block text-sm font-medium text-gray-300 mb-1">Payload Type</label>
+                        <select id="payloadType" name="payloadType" class="form-select w-full rounded-md shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            <option value="">Select a payload...</option>
+                        </select>
+                    </div>
+                    <div id="payloadInfo" class="mt-2 md:mt-0 p-4 bg-gray-700 rounded-md min-h-[100px]">
+                        <h3 class="text-md font-semibold text-emerald-400">Payload Details:</h3>
+                        <p id="payloadResearch" class="text-sm text-gray-300 mt-1">R&D Interest: N/A</p>
+                        <p id="payloadDescription" class="text-sm text-gray-400 mt-1">Description: Please select a payload type.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card p-6 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-semibold text-emerald-300 mb-4">2. Select Your Space Mission</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="missionType" class="block text-sm font-medium text-gray-300 mb-1">Mission Type</label>
+                        <select id="missionType" name="missionType" class="form-select w-full rounded-md shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            <option value="">Select a mission...</option>
+                        </select>
+                    </div>
+                    <div id="missionInfo" class="mt-2 md:mt-0 p-4 bg-gray-700 rounded-md min-h-[100px]">
+                        <h3 class="text-md font-semibold text-emerald-400">Mission Details:</h3>
+                        <p id="missionDuration" class="text-sm text-gray-300 mt-1">Duration: N/A</p>
+                        <p id="missionDescription" class="text-sm text-gray-400 mt-1">Description: Please select a mission type.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card p-6 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-semibold text-emerald-300 mb-4">3. Additional Requirements</h2>
+                <div>
+                    <label for="additionalNotes" class="block text-sm font-medium text-gray-300 mb-1">Notes or Specific Requests</label>
+                    <textarea id="additionalNotes" name="additionalNotes" rows="4" class="form-textarea w-full rounded-md shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="E.g., specific experimental conditions, observation frequency, data handling requirements..."></textarea>
+                </div>
+            </section>
+            
+            <section class="card p-6 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-semibold text-emerald-300 mb-4">4. Your Contact Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="userName" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                        <input type="text" id="userName" name="userName" class="form-input w-full rounded-md shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="userEmail" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                        <input type="email" id="userEmail" name="userEmail" class="form-input w-full rounded-md shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="you@example.com">
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label for="userOrganization" class="block text-sm font-medium text-gray-300 mb-1">Organization (Optional)</label>
+                    <input type="text" id="userOrganization" name="userOrganization" class="form-input w-full rounded-md shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Your Company / Institution">
+                </div>
+            </section>
+
+            <section class="text-center space-y-6 mt-8">
+                <button type="button" id="generateSummaryBtn" class="btn-primary font-semibold py-3 px-8 rounded-lg shadow-md text-lg inline-flex items-center">
+                    Generate Mission Summary
+                    <span id="summaryLoader" class="loader ml-2 hidden"></span>
+                </button>
+                
+                <div id="summarySection" class="card p-6 rounded-lg shadow-xl mt-6 hidden">
+                    <h2 class="text-2xl font-semibold text-emerald-300 mb-4">5. Your Mission Summary</h2>
+                    <div id="generatedSummary" class="text-left text-gray-300 bg-gray-700 p-4 rounded-md min-h-[150px] whitespace-pre-wrap">
+                        Your AI-generated mission summary will appear here...
+                    </div>
+                    <button type="button" id="requestQuoteBtn" class="btn-secondary font-semibold py-3 px-8 rounded-lg shadow-md text-lg mt-6 hidden">
+                        Request Full Quote
+                    </button>
+                </div>
+            </section>
+        </form>
+    </div>
+
+    <script>
+        // --- Data Definitions ---
+        const payloads = [
+            { id: 'microbe', name: 'Microbe Culture', research: 'AMR Research', description: 'Cultivate microorganisms in space to study antibiotic resistance and microbial evolution in unique microgravity conditions.' },
+            { id: 'protein', name: 'Protein Crystallization', research: 'Novel Drug Discovery', description: 'Grow high-quality protein crystals for advanced structural analysis, crucial for designing new pharmaceuticals and therapies.' },
+            { id: 'emulsion', name: 'Double Emulsion', research: 'Advanced Drug Delivery', description: 'Develop highly stable double emulsions for precise, targeted, and controlled release of therapeutic agents in biological systems.' },
+            { id: 'cell', name: 'Cell Culture', research: 'Bioreactor Development', description: 'Conduct sophisticated cell culture experiments to understand cellular responses to microgravity and radiation, and pioneer bioreactors for space applications.' }
+        ];
+
+        const missions = [
+            { id: 'atmospheric', name: 'Atmospheric Missions', duration: '~9 seconds', description: 'Ultra-short duration missions reaching Earth\'s upper atmosphere, perfect for rapid exposure experiments and atmospheric sampling.' },
+            { id: 'suborbital', name: 'Sub-Orbital Missions', duration: '~9 minutes', description: 'Brief but impactful flights into space providing several minutes of valuable microgravity, ideal for initial proof-of-concept studies and technology demonstrations.' },
+            { id: 'orbital', name: 'Orbital Missions', duration: '~9 weeks', description: 'Extended missions in Earth orbit offering prolonged periods of microgravity for more comprehensive research projects and material science.' },
+            { id: 'iss', name: 'ISS Missions', duration: '~9 months', description: 'Long-duration expeditions aboard the International Space Station, enabling in-depth, complex biological experiments and long-term human health studies in space.' }
+        ];
+
+        // --- DOM Elements ---
+        const payloadTypeSelect = document.getElementById('payloadType');
+        const payloadResearchP = document.getElementById('payloadResearch');
+        const payloadDescriptionP = document.getElementById('payloadDescription');
+        
+        const missionTypeSelect = document.getElementById('missionType');
+        const missionDurationP = document.getElementById('missionDuration');
+        const missionDescriptionP = document.getElementById('missionDescription');
+
+        const additionalNotesTextarea = document.getElementById('additionalNotes');
+        const userNameInput = document.getElementById('userName');
+        const userEmailInput = document.getElementById('userEmail');
+        const userOrganizationInput = document.getElementById('userOrganization');
+        
+        const generateSummaryBtn = document.getElementById('generateSummaryBtn');
+        const summaryLoader = document.getElementById('summaryLoader');
+        const summarySection = document.getElementById('summarySection');
+        const generatedSummaryDiv = document.getElementById('generatedSummary');
+        const requestQuoteBtn = document.getElementById('requestQuoteBtn');
+        const customMessageBox = document.getElementById('customMessageBox');
+
+        // --- Populate Select Options ---
+        function populateSelect(selectElement, items) {
+            items.forEach(item => {
+                const option = document.createElement('option');
+                option.value = item.id;
+                option.textContent = item.name;
+                selectElement.appendChild(option);
+            });
+        }
+
+        populateSelect(payloadTypeSelect, payloads);
+        populateSelect(missionTypeSelect, missions);
+
+        // --- Event Listeners ---
+        payloadTypeSelect.addEventListener('change', function() {
+            const selectedPayload = payloads.find(p => p.id === this.value);
+            if (selectedPayload) {
+                payloadResearchP.textContent = `R&D Interest: ${selectedPayload.research}`;
+                payloadDescriptionP.textContent = `Description: ${selectedPayload.description}`;
+            } else {
+                payloadResearchP.textContent = 'R&D Interest: N/A';
+                payloadDescriptionP.textContent = 'Description: Please select a payload type.';
+            }
+        });
+
+        missionTypeSelect.addEventListener('change', function() {
+            const selectedMission = missions.find(m => m.id === this.value);
+            if (selectedMission) {
+                missionDurationP.textContent = `Duration: ${selectedMission.duration}`;
+                missionDescriptionP.textContent = `Description: ${selectedMission.description}`;
+            } else {
+                missionDurationP.textContent = 'Duration: N/A';
+                missionDescriptionP.textContent = 'Description: Please select a mission type.';
+            }
+        });
+
+        generateSummaryBtn.addEventListener('click', handleGenerateSummary);
+        requestQuoteBtn.addEventListener('click', handleRequestQuote);
+
+        // --- Functions ---
+        function showMessage(message, type = 'success') {
+            customMessageBox.textContent = message;
+            customMessageBox.className = `message-box message-box-${type}`; // Reset classes and add new ones
+            customMessageBox.style.display = 'block';
+            setTimeout(() => {
+                customMessageBox.style.display = 'none';
+            }, 5000);
+        }
+
+        function validateForm() {
+            if (!payloadTypeSelect.value) {
+                showMessage('Please select a Payload Type.', 'error');
+                payloadTypeSelect.focus();
+                return false;
+            }
+            if (!missionTypeSelect.value) {
+                showMessage('Please select a Mission Type.', 'error');
+                missionTypeSelect.focus();
+                return false;
+            }
+            if (!userNameInput.value.trim()) {
+                showMessage('Please enter your Full Name.', 'error');
+                userNameInput.focus();
+                return false;
+            }
+            if (!userEmailInput.value.trim() || !/^\S+@\S+\.\S+$/.test(userEmailInput.value)) {
+                showMessage('Please enter a valid Email Address.', 'error');
+                userEmailInput.focus();
+                return false;
+            }
+            return true;
+        }
+
+        async function handleGenerateSummary() {
+            if (!validateForm()) {
+                return;
+            }
+
+            const selectedPayload = payloads.find(p => p.id === payloadTypeSelect.value);
+            const selectedMission = missions.find(m => m.id === missionTypeSelect.value);
+            const notes = additionalNotesTextarea.value.trim();
+
+            const prompt = `
+                Generate a concise and engaging summary for a space mission quote request.
+                The client is interested in the following:
+                - Payload: "${selectedPayload.name}" (Research Focus: ${selectedPayload.research}). Payload Description: ${selectedPayload.description}.
+                - Mission: "${selectedMission.name}" (Duration: ${selectedMission.duration}). Mission Description: ${selectedMission.description}.
+                - Client's Organization: ${userOrganizationInput.value.trim() || 'Not specified'}.
+                - Additional client notes: "${notes || 'No additional notes provided.'}"
+
+                The summary should be suitable for initiating a quote process. It should be positive, highlight the key aspects of the proposed research/mission, and convey excitement for the space venture.
+                Keep it to 2-3 paragraphs. Address it to the client or about the client's request.
+            `;
+
+            summaryLoader.classList.remove('hidden');
+            generateSummaryBtn.disabled = true;
+            generatedSummaryDiv.textContent = 'Generating your mission summary... please wait.';
+            summarySection.classList.remove('hidden');
+            requestQuoteBtn.classList.add('hidden');
+
+
+            try {
+                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Gemini API key (leave empty for Canvas environment)
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error('API Error:', errorData);
+                    throw new Error(`API request failed with status ${response.status}: ${errorData.error?.message || 'Unknown error'}`);
+                }
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    generatedSummaryDiv.textContent = text;
+                    requestQuoteBtn.classList.remove('hidden');
+                    showMessage('Mission summary generated successfully!', 'success');
+                } else {
+                    console.error('Unexpected API response structure:', result);
+                    generatedSummaryDiv.textContent = 'Could not generate summary. Unexpected response from AI. Please try again.';
+                    showMessage('Failed to parse AI response. Please try again.', 'error');
+                }
+            } catch (error) {
+                console.error('Error generating summary:', error);
+                generatedSummaryDiv.textContent = `An error occurred while generating the summary: ${error.message}. Please try again.`;
+                showMessage(`Error: ${error.message}`, 'error');
+            } finally {
+                summaryLoader.classList.add('hidden');
+                generateSummaryBtn.disabled = false;
+            }
+        }
+
+        function handleRequestQuote() {
+            if (!validateForm()) return; // Re-validate before final "submission"
+            
+            const summaryText = generatedSummaryDiv.textContent;
+            if (summaryText.includes('Generating your mission summary') || summaryText.includes('Could not generate summary')) {
+                showMessage('Please generate a valid summary before requesting a quote.', 'error');
+                return;
+            }
+
+            // In a real application, you would send this data to a server.
+            // For this example, we'll just show a confirmation.
+            console.log({
+                payload: payloadTypeSelect.value,
+                mission: missionTypeSelect.value,
+                notes: additionalNotesTextarea.value,
+                name: userNameInput.value,
+                email: userEmailInput.value,
+                organization: userOrganizationInput.value,
+                summary: summaryText
+            });
+            
+            showMessage(`Thank you, ${userNameInput.value}! Your quote request for the "${payloads.find(p=>p.id === payloadTypeSelect.value).name}" payload on a "${missions.find(m=>m.id === missionTypeSelect.value).name}" mission has been notionally submitted. We will contact you at ${userEmailInput.value} shortly.`, 'success');
+            
+            // Optionally, disable the button or reset parts of the form
+            requestQuoteBtn.disabled = true;
+            requestQuoteBtn.textContent = 'Quote Requested!';
+            // bookingForm.reset(); // Uncomment to reset the form
+            // payloadResearchP.textContent = 'R&D Interest: N/A';
+            // payloadDescriptionP.textContent = 'Description: Please select a payload type.';
+            // missionDurationP.textContent = 'Duration: N/A';
+            // missionDescriptionP.textContent = 'Description: Please select a mission type.';
+            // summarySection.classList.add('hidden');
+        }
+
+        // Initial state update for descriptions
+        payloadTypeSelect.dispatchEvent(new Event('change'));
+        missionTypeSelect.dispatchEvent(new Event('change'));
+
+    </script>
+</body>
+</html>

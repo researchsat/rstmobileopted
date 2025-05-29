@@ -12,6 +12,7 @@ import missionIcon from '../assets/images/icon-mission.svg';
 import payloadsIcon from '../assets/images/payloads-icon.svg';
 import newsIcon from '../assets/images/news-icon.svg';
 import careersIcon from '../assets/images/career-icon.svg';
+import contactsIcon from '../assets/images/contacts-icon.svg';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -138,14 +139,18 @@ const Navigation = () => {
                       <img src={careersIcon} alt="Careers" width="16" height="16" />
                       Careers
                     </Link>
+                    <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                      <img src={contactsIcon} alt="Contact" width="16" height="16" />
+                      Contact
+                    </Link>
                   </div>
                 </div>
               </div>
             )}
           </div>
 
-          <Link className={styles.contactButton} to="/contact">
-            <span className={styles.contactText}>Contact</span>
+          <Link className={styles.contactButton} to="/book-mission">
+            <span className={styles.contactText}>Book Mission</span>
           </Link>
         </div>
 
@@ -190,6 +195,9 @@ const Navigation = () => {
             </li>
             <li>
               <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link to="/book-mission">Book Mission</Link>
             </li>
           </ul>
         </div>
