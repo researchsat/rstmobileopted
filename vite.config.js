@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import viteImagemin from 'vite-plugin-imagemin';
 
 export default defineConfig({
-  base: './', // Use relative paths for assets
+  base: '/', // Use absolute paths for clean URLs
   plugins: [
     react(),
     viteImagemin({
@@ -75,6 +75,14 @@ export default defineConfig({
         },
       },
     },
+  },
+  // Development server configuration for client-side routing
+  server: {
+    historyApiFallback: true,
+  },
+  // Preview server configuration for client-side routing
+  preview: {
+    historyApiFallback: true,
   },
   // Optimize dependencies
   optimizeDeps: {

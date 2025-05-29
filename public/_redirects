@@ -1,0 +1,20 @@
+# Netlify redirects for client-side routing
+# This ensures that all routes are handled by the React app
+
+# Handle all routes by serving index.html
+/*    /index.html   200
+
+# Optional: Redirect old hash-based URLs to clean URLs
+/#/about           /about           301!
+/#/contact         /contact         301!
+/#/missions        /missions        301!
+/#/payloads        /payloads        301!
+/#/news            /news            301!
+/#/careers         /careers         301!
+/#/features        /features        301!
+/#/partnerships    /partnerships    301!
+/#/past-missions   /past-missions   301!
+/#/terms-conditions /terms-conditions 301!
+/#/privacy-policy  /privacy-policy  301!
+/#/emailSign       /emailSign       301!
+/#/test            /test            301!
