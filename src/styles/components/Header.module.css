@@ -166,6 +166,12 @@
     height: 600px;
   }
 
+  /* Tablet background image positioning */
+  .heroContainer {
+    background-position: center center;
+    background-size: cover;
+  }
+
   .rightContent {
     right: 20px;
     top: 100px;
@@ -192,6 +198,12 @@
 @media (max-width: 576px) {
   .header {
     height: 75vh;
+  }
+
+  /* Mobile background image positioning */
+  .heroContainer {
+    background-position: center center !important;
+    background-size: cover !important;
   }
 
   /* Mobile container for all text content */

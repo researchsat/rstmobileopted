@@ -19,6 +19,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const menuRef = useRef(null);
 
   // Handle navbar visibility and collapse on scroll
@@ -53,6 +54,22 @@ const Navigation = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollPos]);
+
+  // Mobile detection useEffect
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on mount
+    checkScreenSize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', checkScreenSize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -115,6 +132,10 @@ const Navigation = () => {
                       <img src={servicesIcon} alt="Features" width="16" height="16" />
                       Features
                     </Link>
+                    <Link to="/offerings" onClick={() => setIsMenuOpen(false)}>
+                      <img src={servicesIcon} alt="Offerings" width="16" height="16" />
+                      Our Offerings
+                    </Link>
                   </div>
 
                   {/* Column 2 */}
@@ -150,7 +171,7 @@ const Navigation = () => {
           </div>
 
           <Link className={styles.contactButton} to="/book-mission">
-            <span className={styles.contactText}>Book Mission</span>
+            <span className={styles.contactText}>{isMobile ? 'Book' : 'Book Mission'}</span>
           </Link>
         </div>
 
@@ -182,6 +203,9 @@ const Navigation = () => {
               <Link to="/features">Features</Link>
             </li>
             <li>
+              <Link to="/offerings">Our Offerings</Link>
+            </li>
+            <li>
               <Link to="/missions">Mission</Link>
             </li>
             <li>
@@ -197,7 +221,7 @@ const Navigation = () => {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link to="/book-mission">Book Mission</Link>
+              <Link to="/book-mission">{isMobile ? 'Book' : 'Book Mission'}</Link>
             </li>
           </ul>
         </div>

@@ -1,11 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../styles/components/Header.module.css';
 import BackgroundImage from './BackgroundImage';
 import heroBackground from '../assets/images/hero/hero-background.png';
+import mobileHeroBackground from '../assets/images/hero/mobliehr3.jpg';
 import VideoModal from './VideoModal';
 
 const Header = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if screen is mobile size
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on mount
+    checkScreenSize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', checkScreenSize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const openVideoModal = (e) => {
     e.preventDefault();
@@ -16,10 +34,13 @@ const Header = () => {
     setIsVideoModalOpen(false);
   };
 
+  // Choose background image based on screen size
+  const backgroundImage = isMobile ? mobileHeroBackground : heroBackground;
+
   return (
     <header id="header" className={styles.header}>
       <BackgroundImage
-        src={heroBackground}
+        src={backgroundImage}
         className={styles.heroContainer}
         minHeight="100vh"
         position="center"

@@ -373,7 +373,11 @@
 
 @media (max-width: 991px) {
   .nav {
-    padding: 12px 15px;
+    padding: 16px;
+  }
+
+  .frame1000006514 {
+    gap: 16px;
   }
 
   .navLinksGroup {
@@ -382,8 +386,8 @@
 
   .menuContainer {
     margin-left: auto;
-    width: calc(100% - 30px - 120px);
-    margin: 0 15px;
+    width: calc(100% - 32px - 120px);
+    margin: 0 16px;
   }
 
   .logoImage {
@@ -394,13 +398,14 @@
   .dropdownMenu {
     position: fixed;
     top: 72px;
-    left: 15px;
-    right: 15px;
-    width: calc(100% - 30px);
+    left: 16px;
+    right: 16px;
+    width: calc(100% - 32px);
     min-width: auto;
     transform: none;
     border-radius: 8px;
     animation: mobileFadeIn 0.2s ease-in-out;
+    padding: 16px;
   }
 
   @keyframes mobileFadeIn {
@@ -425,7 +430,15 @@
 
 @media (max-width: 767px) {
   .nav {
-    padding: 12px 15px;
+    padding: 16px;
+  }
+
+  .frame1000006514 {
+    gap: 16px;
+  }
+
+  .logoContainer {
+    margin-right: 0;
   }
 
   .logoImage {
@@ -434,11 +447,15 @@
   }
 
   .menuContainer {
-    width: calc(100% - 30px - 100px);
+    width: calc(100% - 32px - 80px);
+    padding: 8px 16px;
   }
 
   .dropdownMenu {
-    padding: 1.5rem;
+    padding: 16px;
+    left: 16px;
+    right: 16px;
+    width: calc(100% - 32px);
   }
 
   .menuText {
@@ -447,7 +464,8 @@
 
   .contactButton {
     width: auto;
-    padding: 8px 12px;
+    padding: 8px 16px;
+    margin-left: 0;
   }
 
   .contactText {

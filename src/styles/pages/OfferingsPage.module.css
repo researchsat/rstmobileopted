@@ -1,0 +1,464 @@
+/* OfferingsPage.module.css */
+.offeringsPage {
+  position: relative;
+}
+
+/* Hero Section - Same as About Page */
+.heroSection {
+  position: relative;
+  height: 780px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.heroBackground {
+  width: 100%;
+  height: 522px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  opacity: 0.9;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.gradientOverlay {
+  background: linear-gradient(0deg, rgba(18, 18, 18, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  width: 100vw;
+  height: 85px;
+  position: absolute;
+  left: 0;
+  top: 485px;
+  filter: blur(20px);
+  flex-shrink: 0;
+}
+
+.contentContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  left: 80px;
+  top: 239px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.offeringsLabel {
+  color: var(--secondary-color, #ff3241);
+  text-align: left;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.heroTitle {
+  color: #ffffff;
+  text-align: left;
+  font-size: 58px;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  width: 959px;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1280px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 602px;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  align-self: stretch;
+}
+
+.descriptionText {
+  color: #ffffff;
+  text-align: right;
+  font-size: 23px;
+  line-height: 140%;
+  font-weight: 500;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Offerings Section */
+.offeringsSection {
+  background-color: #121212;
+  padding: 120px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  color: #bcd8d5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 24px 0;
+  background: linear-gradient(135deg, #bcd8d5 0%, #107e7d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+  color: #687e7c;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offeringsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.offeringCard {
+  background: linear-gradient(135deg, #17242d 0%, #121212 100%);
+  border: 1px solid rgba(188, 216, 213, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.offeringCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(16, 126, 125, 0.2);
+  border-color: rgba(16, 126, 125, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.offeringIcon {
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 126, 125, 0.1);
+  border-radius: 12px;
+  border: 1px solid #ff32414a;
+}
+
+.offeringTitle {
+  color: #bcd8d5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0;
+}
+
+.offeringDescription {
+  color: #fffef6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0 0 24px 0;
+  opacity: 0.9;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.featureIcon {
+  color: #107e7d;
+  font-size: 14px;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 126, 125, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.featureText {
+  color: #687e7c;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+/* CTA Section */
+.ctaSection {
+  background-color: #001718;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  color: #bcd8d5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 24px 0;
+}
+
+.ctaDescription {
+  color: #687e7c;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0 0 48px 0;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryButton,
+.secondaryButton {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primaryButton {
+  background-color: #107e7d;
+  color: #fffef6;
+  border: 2px solid #107e7d;
+}
+
+.primaryButton:hover {
+  background-color: #17242d;
+  border-color: #bcd8d5;
+  color: #bcd8d5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 126, 125, 0.3);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #107e7d;
+  border: 2px solid #107e7d;
+}
+
+.secondaryButton:hover {
+  background-color: #107e7d;
+  color: #fffef6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 126, 125, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 48px;
+    width: 800px;
+  }
+
+  .contentContainer {
+    padding: 0 40px;
+  }
+
+  .heroContent {
+    left: 40px;
+  }
+
+  .offeringsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 991px) {
+  .heroSection {
+    height: auto;
+    padding-bottom: 400px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .bottomContainer {
+    position: relative;
+    top: auto;
+    margin-top: 350px;
+  }
+
+  .offeringsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+
+  .ctaTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .descriptionText {
+    font-size: 18px;
+  }
+
+  .contentContainer {
+    padding: 0 20px;
+  }
+
+  .heroContent {
+    left: 20px;
+  }
+
+  .offeringsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .offeringCard {
+    padding: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .sectionSubtitle {
+    font-size: 16px;
+  }
+
+  .ctaTitle {
+    font-size: 28px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .descriptionText {
+    font-size: 16px;
+  }
+
+  .offeringCard {
+    padding: 20px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .offeringIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .offeringTitle {
+    font-size: 20px;
+  }
+}

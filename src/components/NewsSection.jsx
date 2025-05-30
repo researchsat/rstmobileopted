@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styles/components/NewsSection.module.css';
 import avatarImg from '../assets/images/news/avatar-square.svg';
 import arrowIcon from '../assets/images/news/arrow-icon.svg';
@@ -8,6 +8,7 @@ import chevronRight from '../assets/images/news/chevron-right.svg';
 import NewsLightbox from './NewsLightbox';
 
 const NewsSection = () => {
+  const navigate = useNavigate();
   const newsCardsRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -15,6 +16,7 @@ const NewsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Lightbox state
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -70,6 +72,22 @@ const NewsSection = () => {
         container.removeEventListener('scroll', handleScroll);
       };
     }
+  }, []);
+
+  // Mobile detection useEffect
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Check on mount
+    checkScreenSize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', checkScreenSize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
   // Handle mouse down event for dragging
@@ -207,6 +225,19 @@ const NewsSection = () => {
     document.body.style.overflow = 'auto';
   };
 
+  // Handle card click - either open lightbox or navigate to news page
+  const handleCardClick = (e, index) => {
+    e.preventDefault();
+
+    if (isMobile) {
+      // On mobile, navigate to news page
+      navigate('/news');
+    } else {
+      // On desktop, open lightbox
+      openLightbox(index);
+    }
+  };
+
   // News card data
   const newsCards = [
     {
@@ -340,10 +371,7 @@ const NewsSection = () => {
                   key={card.id}
                   className={styles.newsCard}
                   style={{ backgroundImage: card.backgroundImage }}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    openLightbox(index);
-                  }}
+                  onClick={(e) => handleCardClick(e, index)}
                 >
                   <img src={arrowIcon} alt="" className={styles.cardIcon} />
                   <div className={styles.cardDetails}>
@@ -379,13 +407,15 @@ const NewsSection = () => {
         </div>
       </div>
 
-      {/* News Lightbox */}
-      <NewsLightbox
-        isOpen={isLightboxOpen}
-        onClose={closeLightbox}
-        newsCards={newsCards}
-        initialIndex={lightboxIndex}
-      />
+      {/* News Lightbox - Only render on desktop */}
+      {!isMobile && (
+        <NewsLightbox
+          isOpen={isLightboxOpen}
+          onClose={closeLightbox}
+          newsCards={newsCards}
+          initialIndex={lightboxIndex}
+        />
+      )}
     </section>
   );
 };
